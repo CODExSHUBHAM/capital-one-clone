@@ -9,7 +9,7 @@ const Catagories = () => {
 
     const getData = () => {
 
-      fetch('https://capital-one-api-alpha.vercel.app/catagories')
+      fetch('https://capitalone-api.vercel.app/catagories')
         .then(response => response.json())
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));

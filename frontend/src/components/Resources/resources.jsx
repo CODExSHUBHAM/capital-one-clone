@@ -9,7 +9,7 @@ const Resources = () => {
 
     const getData = () => {
 
-      fetch('https://capital-one-api-alpha.vercel.app/articles')
+      fetch('https://capitalone-api.vercel.app/articles')
         .then(response => response.json())
         .then(data => setArticles(data.data))
         .catch(error => console.error(error));

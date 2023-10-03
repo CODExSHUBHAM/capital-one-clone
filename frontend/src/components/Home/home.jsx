@@ -8,12 +8,10 @@ const Home = () => {
   const [catagories, setCatagories] = useState([]);
   const [deals, setDeals] = useState([]);
 
-  console.log(deals,catagories)
-
   useEffect(() => {
 
      const getDeals = () => {
-      fetch('https://capital-one-api-alpha.vercel.app/deals')
+      fetch('https://capitalone-api.vercel.app/deals')
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error));
@@ -28,7 +26,7 @@ const Home = () => {
 
     const getCatagories = () => {
 
-      fetch('https://capital-one-api-alpha.vercel.app/catagories')
+      fetch('https://capitalone-api.vercel.app/catagories')
         .then(response => response.json())
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));
@@ -37,8 +35,6 @@ const Home = () => {
   }, [])
 
   const topCatagories = catagories.slice(0, 4);
-
-  console.log(deals,catagories)
 
   return (
     <>
