@@ -14,13 +14,21 @@ const Home = () => {
 
     const getDeals = () => {
 
+      const getCatagories = () => {
+
+      fetch('https://capital-one-api-alpha.vercel.app/catagories')
+        .then(response => response.json())
+        .then(data => setCatagories(data.data))
+        .catch(error => console.error(error));
+    }
+
       fetch('https://capital-one-api-alpha.vercel.app/deals')
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error));
     }
 
-    return () => getDeals();
+    return () => getDeals() , getCatagories();
   }, [])
 
   const topDeals = deals.slice(0, 8);
