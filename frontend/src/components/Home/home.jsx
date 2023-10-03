@@ -12,16 +12,16 @@ const Home = () => {
 
   useEffect(() => {
 
-    const getDeals = () => {
-
-      const getCatagories = () => {
+    const getCatagories = () => {
 
       fetch('https://capital-one-api-alpha.vercel.app/catagories')
         .then(response => response.json())
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));
     }
+    
 
+    const getDeals = () => {
       fetch('https://capital-one-api-alpha.vercel.app/deals')
         .then(response => response.json())
         .then(data => setDeals(data.data))
