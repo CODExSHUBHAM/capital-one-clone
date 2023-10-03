@@ -10,14 +10,6 @@ const Home = () => {
 
   useEffect(() => {
 
-    const getCatagories = () => {
-
-      fetch('https://capital-one-api-alpha.vercel.app/catagories')
-        .then(response => response.json())
-        .then(data => setCatagories(data.data))
-        .catch(error => console.error(error));
-    }
-
     const getDeals = () => {
 
       fetch('https://capital-one-api-alpha.vercel.app/deals')
@@ -26,7 +18,7 @@ const Home = () => {
         .catch(error => console.error(error));
     }
 
-    return () => getCatagories(), getDeals();
+    return () => getDeals();
   }, [])
 
   const topDeals = deals.slice(0, 8);
