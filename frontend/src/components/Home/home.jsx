@@ -12,7 +12,7 @@ const Home = () => {
 
     const getCatagories = () => {
 
-      fetch('http://localhost:5000/catagories')
+      fetch('https://capital-one-api-alpha.vercel.app/catagories')
         .then(response => response.json())
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));
@@ -20,7 +20,7 @@ const Home = () => {
 
     const getDeals = () => {
 
-      fetch('http://localhost:5000/deals')
+      fetch('https://capital-one-api-alpha.vercel.app/deals')
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error));
@@ -35,7 +35,7 @@ const Home = () => {
 
     const getCatagories = () => {
 
-      fetch('http://localhost:5000/catagories')
+      fetch('https://capital-one-api-alpha.vercel.app/catagories')
         .then(response => response.json())
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));
