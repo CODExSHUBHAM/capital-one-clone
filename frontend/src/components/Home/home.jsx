@@ -19,33 +19,22 @@ const Home = () => {
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));
     }
-    
+    return () => getCatagories();
+  }, [])
 
-    const getDeals = () => {
+  useEffect(() => {
+
+     const getDeals = () => {
       fetch('https://capital-one-api-alpha.vercel.app/deals')
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error));
     }
 
-    return () => getDeals() , getCatagories();
+    return () => getDeals();
   }, [])
 
   const topDeals = deals.slice(0, 8);
-
-  useEffect(() => {
-
-    const getCatagories = () => {
-
-      fetch('https://capital-one-api-alpha.vercel.app/catagories')
-        .then(response => response.json())
-        .then(data => setCatagories(data.data))
-        .catch(error => console.error(error));
-    }
-
-    return () => getCatagories();
-  }, [])
-
   const topCatagories = catagories.slice(0, 4);
 
   return (
