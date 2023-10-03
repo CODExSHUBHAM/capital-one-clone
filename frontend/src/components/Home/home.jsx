@@ -8,6 +8,8 @@ const Home = () => {
   const [catagories, setCatagories] = useState([]);
   const [deals, setDeals] = useState([]);
 
+  console.log(deals,catagories)
+
   useEffect(() => {
 
     const getDeals = () => {
