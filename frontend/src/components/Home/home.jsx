@@ -11,6 +11,7 @@ const Home = () => {
   useEffect(() => {
 
      const getDeals = () => {
+      
       fetch('https://capitalone-api.vercel.app/deals')
         .then(response => response.json())
         .then(data => setDeals(data.data))
