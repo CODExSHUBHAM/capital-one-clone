@@ -12,7 +12,7 @@ const Home = () => {
 
      const getDeals = () => {
       
-      fetch('https://capitalone-api.vercel.app/deals')
+      fetch('https://capitalone-api.vercel.app/deals/')
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error));
@@ -27,7 +27,7 @@ const Home = () => {
 
     const getCatagories = () => {
 
-      fetch('https://capitalone-api.vercel.app/catagories')
+      fetch('https://capitalone-api.vercel.app/catagories/')
         .then(response => response.json())
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));
