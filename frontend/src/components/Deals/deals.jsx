@@ -83,69 +83,89 @@ const Deals = () => {
           <hr className="border-black" />
         </nav>
 
-        <div className="flex w-11/12 m-auto">
+        <div className="flex w-10/12 m-auto">
 
           {/* 1st Half */}
-          <section className="w-1/3 flex flex-col p-10 ">
-            <div className="flex justify-between">
-              <h1 className="text-xl font-semibold">Filter</h1>
-              <h1 className="font-semibold text-blue-600">Reset Filters</h1>
-            </div>
-            {/* filters */}
-            <div className="p-4 flex flex-col space-y-2">
-
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='0' onChange={onChange} />
-                <p className="text-sm font-medium">All Categories</p>
-                <p className="text-xs border px-2 rounded-xl">213</p>
+          <section className="w-fit flex flex-col p-10 ">
+            <div className="w-fit">
+              <div className="flex justify-between">
+                <h1 className="text-xl font-semibold">Filter</h1>
+                <h1 className="font-semibold text-blue-600">Reset Filters</h1>
               </div>
+              {/* filters */}
+              <div className="p-4 flex flex-col space-y-2">
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='11' onChange={onChange} />
-                <p className="text-sm font-medium">Business Travel</p>
-                <p className="text-xs border px-2 rounded-xl">32</p>
-              </div>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='0' onChange={onChange} />
+                    <p className="text-sm font-medium">All Categories</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">213</p>
+                </div>
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='14' onChange={onChange} />
-                <p className="text-sm font-medium">Administrative</p>
-                <p className="text-xs border px-2 rounded-xl">16</p>
-              </div>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='11' onChange={onChange} />
+                    <p className="text-sm font-medium">Business Travel</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">32</p>
+                </div>
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='3' onChange={onChange} />
-                <p className="text-sm font-medium">Technology</p>
-                <p className="text-xs border px-2 rounded-xl">41</p>
-              </div>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='14' onChange={onChange} />
+                    <p className="text-sm font-medium">Administrative</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">16</p>
+                </div>
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='15' onChange={onChange} />
-                <p className="text-sm font-medium">Cyber Security</p>
-                <p className="text-xs border px-2 rounded-xl">3</p>
-              </div>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='3' onChange={onChange} />
+                    <p className="text-sm font-medium">Technology</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">41</p>
+                </div>
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='13' onChange={onChange} />
-                <p className="text-sm font-medium">HR & Benefits</p>
-                <p className="text-xs border px-2 rounded-xl">29</p>
-              </div>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='15' onChange={onChange} />
+                    <p className="text-sm font-medium">Cyber Security</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">3</p>
+                </div>
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='16' onChange={onChange} />
-                <p className="text-sm font-medium">Communications</p>
-                <p className="text-xs border px-2 rounded-xl">7</p>
-              </div>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='13' onChange={onChange} />
+                    <p className="text-sm font-medium">HR & Benefits</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">29</p>
+                </div>
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='8' onChange={onChange} />
-                <p className="text-sm font-medium">Office Supplies</p>
-                <p className="text-xs border px-2 rounded-xl">55</p>
-              </div>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='16' onChange={onChange} />
+                    <p className="text-sm font-medium">Communications</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">7</p>
+                </div>
 
-              <div className="flex space-x-4 items-center">
-                <input type="checkbox" id='10' onChange={onChange} />
-                <p className="text-sm font-medium">Business Marketing</p>
-                <p className="text-xs border px-2 rounded-xl">34</p>
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='8' onChange={onChange} />
+                    <p className="text-sm font-medium">Office Supplies</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">55</p>
+                </div>
+
+                <div className="flex space-x-4 items-center justify-between">
+                  <div className="flex space-x-2 items-center">
+                    <input type="checkbox" id='10' onChange={onChange} />
+                    <p className="text-sm font-medium">Business Marketing</p>
+                  </div>
+                  <p className="text-xs border px-2 rounded-xl">34</p>
+                </div>
               </div>
             </div>
 
@@ -158,12 +178,14 @@ const Deals = () => {
             {filteredDeals.map((data, key) => {
               return (
                 <div key={key} className="flex space-x-8 border w-full p-4 rounded-md bg-white">
-                  <img src={data.supplierImage} alt="" className="w-48 border-2 rounded md" />
-                  <div className="flex flex-col space-y-2">
+                  <img src={data.supplierImage} alt="" className="w-1/4 border-2 rounded md" />
+
+                  <div className="flex flex-col space-y-2 w-2/4">
                     <p className="font-bold text-[#1E6A0B] w-3/5">{data.discountMessage}</p>
                     <p className="font-bold">{data.title}</p>
                   </div>
-                  <div>
+
+                  <div className="w-1/4 flex flex-col items-end">
                     <Link to={`/Deals/${data.promotionId}`}>
                       <button className=" bg-blue-600 px-8 py-1 rounded-md text-white font-bold">More Info</button>
                     </Link>

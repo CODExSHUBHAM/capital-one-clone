@@ -80,11 +80,11 @@ const Catagories = () => {
 
             {catagories.map((data) => {
               return (
-                <div className="rounded bg-white w-fit shadow-md text-center space-y-5 pb-4" key={data._id}>
+                <Link to={`/Catagories/${data._id}`} className="rounded bg-white w-fit shadow-md text-center space-y-5 pb-4" key={data._id}>
                   <img src={data.image} alt="" className="w-[256px] h-[150px] object-cover" />
                   <h1 className="text-sm uppercase font-bold">{data.category}</h1>
                   <p className="text-base">{data.subcategory}</p>
-                </div>
+                </Link>
               )
             })}
           </div>
