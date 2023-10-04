@@ -9,6 +9,8 @@ const Dealdetails = () => {
   const filteredDeals = deals.filter(item => item.promotionId == id.id)
   const topDeals = deals.slice(0, 4);
 
+  console.log("hello")
+
   useEffect(() => {
     const getData = () => {
 
