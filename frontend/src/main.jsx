@@ -10,7 +10,7 @@ import Resources from './components/Resources/resources.jsx'
 import Signup from './components/SignUp/signup.jsx'
 import Login from './components/LogIn/login.jsx'
 import Dealdetails from './components/Deals/dealdetails.jsx'
-import CatagoryDetails from './components/Catagories/catagoryDetails.jsx'
+import CatagoryDetails from './components/Catagories/catagorydetails.jsx'
 import Resourcedetails from './components/Resources/resourcedetails.jsx'
 
 const router = createBrowserRouter([
