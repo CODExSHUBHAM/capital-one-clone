@@ -17,9 +17,7 @@ const Home = () => {
     console.log("get deals called")
 
     return (
-      fetch('https://capitalone-api.vercel.app/deals/', {
-        mode: 'no-cors'
-      })
+      fetch('https://capitalone-api.vercel.app/deals/',{mode : "no-cors"})
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error))
@@ -38,7 +36,7 @@ getDeals()
 
     const getCatagories = () => {
       return (
-        fetch('https://capitalone-api.vercel.app/catagories/')
+        fetch('https://capitalone-api.vercel.app/catagories/',{mode : "no-cors"})
           .then(response => response.json())
           .then(data => setCatagories(data.data))
           .catch(error => console.error(error))

@@ -14,7 +14,7 @@ const Dealdetails = () => {
   useEffect(() => {
     const getData = () => {
 
-      return fetch('https://capitalone-api.vercel.app/deals')
+      return fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"})
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error));
