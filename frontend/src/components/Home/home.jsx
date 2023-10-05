@@ -20,7 +20,7 @@ const Home = () => {
         fetch('https://capitalone-api.vercel.app/deals/', {
   mode: 'no-cors'
 })
-        .then(response => console.log(response))
+        .then(response => response.json)
         .then(data => console.log(data.data))
       )
       
