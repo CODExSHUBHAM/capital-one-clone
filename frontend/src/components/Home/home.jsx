@@ -10,7 +10,7 @@ const Home = () => {
   const [catagories, setCatagories] = useState([]);
   const [deals, setDeals] = useState([]);
 
-  // useEffect(() => {
+  useEffect(() => {
 
     const getDeals = () => {
 
@@ -25,10 +25,8 @@ const Home = () => {
       
     }
 
-    getDeals()
-
-  //   return () => getDeals();
-  // }, [])
+    return () => getDeals();
+  }, [])
 
   const topDeals = deals.slice(0, 8);
 
