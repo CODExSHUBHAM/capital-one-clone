@@ -39,29 +39,40 @@ const Deals = () => {
     }
   }
 
-  useEffect(() => {
-    const getData = () => {
+  // useEffect(() => {
+  //   const getData = () => {
 
-      fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"})
-        .then(response => response.json())
-        .then(data => setDeals(data.data))
-        .catch(error => console.error(error));
-    }
+  //     fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"})
+  //       .then(response => response.json())
+  //       .then(data => setDeals(data.data))
+  //       .catch(error => console.error(error));
+  //   }
 
-    return () => getData();
-  }, [])
+  //   return () => getData();
+  // }, [])
 
-  useEffect(() => {
-    const getData2 = () => {
+  const getData = () => {
 
-      fetch('https://capitalone-api.vercel.app/deals')
-        .then(response => response.json())
-        .then(data => setFilteredDeals(data.data))
-        .catch(error => console.error(error));
-    }
+    fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"})
+      .then(response => response.json())
+      .then(data => setDeals(data.data))
+      .catch(error => console.error(error));
+  }
 
-    return () => getData2();
-  }, [])
+  getData()
+
+
+  // useEffect(() => {
+  //   const getData2 = () => {
+
+  //     fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"})
+  //       .then(response => response.json())
+  //       .then(data => setFilteredDeals(data.data))
+  //       .catch(error => console.error(error));
+  //   }
+
+  //   return () => getData2();
+  // }, [])
 
 
 
