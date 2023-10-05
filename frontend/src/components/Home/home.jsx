@@ -21,7 +21,7 @@ const Home = () => {
   mode: 'no-cors'
 })
         .then(response => response.json())
-        .then(data => setDeals(data.data))
+        .then(data => console.log(data.data))
         .catch(error => console.error(error))
       )
       
