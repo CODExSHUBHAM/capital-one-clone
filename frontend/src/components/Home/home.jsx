@@ -22,7 +22,7 @@ const Home = () => {
 })
         .then(response => console.log(response))
         .then(data => console.log(data.data))
-        .catch(error => console.error(error))
+        .catch(error)
       )
       
     }
