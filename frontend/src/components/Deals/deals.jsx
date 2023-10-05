@@ -51,12 +51,19 @@ const Deals = () => {
   //   return () => getData();
   // }, [])
 
-  const getData = () => {
+  // const getData = () => {
 
-    fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"})
-      .then(response => response.json())
-      .then(data => setDeals(data.data))
-      .catch(error => console.error(error));
+  //   fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"})
+  //     .then(response => response.json())
+  //     .then(data => setDeals(data.data))
+  //     .catch(error => console.error(error));
+  // }
+
+  async function getData() {
+    console.log("yyyyy")
+    const response = await fetch('https://capitalone-api.vercel.app/deals',{mode : "no-cors"});
+    const data = await response.json();
+    console.log(data);
   }
 
   getData()
