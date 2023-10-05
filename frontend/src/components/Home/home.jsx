@@ -17,7 +17,8 @@ const Home = () => {
       console.log("get deals called")
 
       return(
-        fetch('https://capitalone-api.vercel.app/deals/')
+        fetch('https://capitalone-api.vercel.app/deals/', 
+             headers: {'Access-Control-Allow-Origin': '*' })
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error))
