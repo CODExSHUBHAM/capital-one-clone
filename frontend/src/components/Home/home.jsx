@@ -22,10 +22,10 @@ const Home = () => {
       })
         .then(response => response.json())
         .then(data => setDeals(data.data))
-        // .catch(error => console.error(error))
-    )
-
-  }
+        .catch(error => console.error(error))
+      )
+      
+    }
 
 getDeals()
 
