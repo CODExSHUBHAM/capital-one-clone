@@ -5,16 +5,21 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
 
 const Home = () => {
 
+  console.log("page loaded")
+
   const [catagories, setCatagories] = useState([]);
   const [deals, setDeals] = useState([]);
 
   useEffect(() => {
 
     const getDeals = () => {
+
+      console.log("get deals called")
+
       return(
         fetch('https://capitalone-api.vercel.app/deals/')
         .then(response => response.json())
-        .then(data => setDeals(data.data))
+        .then(data => console.log(data.data))
         .catch(error => console.error(error))
       )
       
@@ -55,7 +60,7 @@ return (
       {/* section 2 */}
       <div className="w-4/5 m-auto flex flex-col justify-center items-center space-y-10">
 
-        <div className="grid grid-cols-4 gap-8">
+        <div className="md:grid grid-cols-4 gap-8">
 
           {/* Cards */}
 
