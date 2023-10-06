@@ -48,7 +48,7 @@ const Deals = () => {
         .catch(error => console.error(error));
     }
 
-    return () => getData();
+    return getData();
   }, [])
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const Deals = () => {
         .catch(error => console.error(error));
     }
 
-    return () => getData2();
+    return getData2();
   }, [])
 
 

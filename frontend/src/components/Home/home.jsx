@@ -9,47 +9,32 @@ const Home = () => {
 
   const [catagories, setCatagories] = useState([]);
   const [deals, setDeals] = useState([]);
+  const topDeals = deals.slice(0, 8);
+  const topCatagories = catagories.slice(0, 4);
 
   useEffect(() => {
 
-  const getDeals = () => {
+    const getDeals = () => {
 
-    console.log("get deals called")
+      console.log("get deals called")
 
-    return (
-      fetch('https://capital-one-clone-api.vercel.app/deals/',{mode : "cors"})
-        .then(response => response.json())
-        .then(data => setDeals(data.data))
-        .catch(error => console.error(error))
+      return (
+        fetch('https://capital-one-clone-api.vercel.app/deals/', { mode: "cors" })
+          .then(response => response.json())
+          .then(data => setDeals(data.data))
+          .catch(error => console.error(error))
       )
-      
-  }
 
-    return () => getDeals();
-  },[])
-  
-  const getDeals = () => {
+    }
 
-    console.log("get deals called")
-
-    return (
-      fetch('https://capital-one-clone-api.vercel.app/deals/',{mode : "cors"})
-        .then(response => response.json())
-        .then(data => setDeals(data.data))
-        .catch(error => console.error(error))
-      )
-      
-  }
-
-  getDeals()
-
-  const topDeals = deals.slice(0, 8);
+    return getDeals();
+  }, [])
 
   useEffect(() => {
 
     const getCatagories = () => {
       return (
-        fetch('https://capital-one-clone-api.vercel.app/catagories/',{mode : "cors"})
+        fetch('https://capital-one-clone-api.vercel.app/catagories/', { mode: "cors" })
           .then(response => response.json())
           .then(data => setCatagories(data.data))
           .catch(error => console.error(error))
@@ -59,11 +44,6 @@ const Home = () => {
 
     return getCatagories();
   }, [])
-
-  const topCatagories = catagories.slice(0, 4);
-
-  console.log(deals);
-  console.log(catagories)
 
   return (
     <>
