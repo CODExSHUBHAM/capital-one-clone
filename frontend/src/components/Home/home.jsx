@@ -12,38 +12,41 @@ const Home = () => {
   const topDeals = deals.slice(0, 8);
   const topCatagories = catagories.slice(0, 4);
 
-  useEffect(() => {
+  const getDeals = () => {
 
-    const getDeals = () => {
+    console.log("get deals called")
 
-      console.log("get deals called")
+    return (
+      fetch('https://capital-one-clone-api.vercel.app/deals/', { mode: "cors" })
+        .then(response => response.json())
+        .then(data => setDeals(data.data))
+        .catch(error => console.error(error))
+    )
 
-      return (
-        fetch('https://capital-one-clone-api.vercel.app/deals/', { mode: "cors" })
-          .then(response => response.json())
-          .then(data => setDeals(data.data))
-          .catch(error => console.error(error))
-      )
+  }
 
-    }
-
-    return getDeals();
-  }, [])
 
   useEffect(() => {
 
-    const getCatagories = () => {
-      return (
-        fetch('https://capital-one-clone-api.vercel.app/catagories/', { mode: "cors" })
-          .then(response => response.json())
-          .then(data => setCatagories(data.data))
-          .catch(error => console.error(error))
-      )
+    getDeals();
+    
 
-    }
-
-    return getCatagories();
   }, [])
+
+  // useEffect(() => {
+
+  //   const getCatagories = () => {
+  //     return (
+  //       fetch('https://capital-one-clone-api.vercel.app/catagories/', { mode: "cors" })
+  //         .then(response => response.json())
+  //         .then(data => setCatagories(data.data))
+  //         .catch(error => console.error(error))
+  //     )
+
+  //   }
+
+  //   return getCatagories();
+  // }, [])
 
   return (
     <>
