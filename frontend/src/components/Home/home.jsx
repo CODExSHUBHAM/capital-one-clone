@@ -56,7 +56,8 @@ const Home = () => {
       )
 
     }
-    return () => getCatagories();
+
+    return getCatagories();
   }, [])
 
   const topCatagories = catagories.slice(0, 4);
