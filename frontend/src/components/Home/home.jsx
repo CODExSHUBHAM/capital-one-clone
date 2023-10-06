@@ -23,10 +23,25 @@ const Home = () => {
         .catch(error => console.error(error))
       )
       
-    }
+  }
 
     return () => getDeals();
-  },)
+  },[])
+  
+  const getDeals = () => {
+
+    console.log("get deals called")
+
+    return (
+      fetch('https://capital-one-clone-api.vercel.app/deals/',{mode : "cors"})
+        .then(response => response.json())
+        .then(data => setDeals(data.data))
+        .catch(error => console.error(error))
+      )
+      
+  }
+
+  getDeals()
 
   const topDeals = deals.slice(0, 8);
 
