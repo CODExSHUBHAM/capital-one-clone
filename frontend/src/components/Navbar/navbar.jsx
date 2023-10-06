@@ -55,7 +55,7 @@ const Navbar = () => {
       {/* mobile Nav  */}
 
       <div>
-        <div className='flex justify between'>
+        <div className='flex justify between md:hidden'>
 
           {/* Hamburger  */}
           
