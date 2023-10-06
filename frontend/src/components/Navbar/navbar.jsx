@@ -39,15 +39,15 @@ const Navbar = () => {
         <Link to='/'><img src={logo} alt="logo" className='w-48' /></Link>
         <nav>
           <ul className='flex space-x-10'>
-            <NavLink to='/Deals' className='hover:text-blue-600' >Deals</NavLink>
-            <NavLink to='/Catagories' className='hover:text-blue-600'>Categories</NavLink>
-            <NavLink to='/Resources' className='hover:text-blue-600'>Resources</NavLink>
+            <NavLink to='/deals' className='hover:text-blue-600' >Deals</NavLink>
+            <NavLink to='/catagories' className='hover:text-blue-600'>Categories</NavLink>
+            <NavLink to='/resources' className='hover:text-blue-600'>Resources</NavLink>
           </ul>
         </nav>
         <div className='flex space-x-5 items-center'>
           <span><AiOutlineSearch className='text-xl' /></span>
-          <NavLink className='flex items-center' to='/Signup'><CiUser className='text-xl' />Sign In</NavLink>
-          <NavLink className='bg-[#25810E] px-6 py-1 rounded-sm font-bold text-white' to='/Login'>Join</NavLink>
+          <NavLink className='flex items-center' to='/signup'><CiUser className='text-xl' />Sign In</NavLink>
+          <NavLink className='bg-[#25810E] px-6 py-1 rounded-sm font-bold text-white' to='/login'>Join</NavLink>
         </div>
       </div>
 

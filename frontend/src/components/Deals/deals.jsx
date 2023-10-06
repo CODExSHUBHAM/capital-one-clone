@@ -186,7 +186,7 @@ const Deals = () => {
                   </div>
 
                   <div className="w-1/4 flex flex-col items-end">
-                    <Link to={`/Deals/${data.promotionId}`}>
+                    <Link to={`/deals/${data.promotionId}`}>
                       <button className=" bg-blue-600 px-8 py-1 rounded-md text-white font-bold">More Info</button>
                     </Link>
                   </div>

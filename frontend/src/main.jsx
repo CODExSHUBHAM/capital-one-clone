@@ -23,31 +23,31 @@ const router = createBrowserRouter([
         element: <Home/>
       },
       {
-        path: "Deals",
+        path: "deals",
         element: <Deals/>
       },
       {
-        path: "Catagories",
+        path: "catagories",
         element: <Catagories/>
       },
       {
-        path: "Resources",
+        path: "resources",
         element: <Resources/>
       },
       {
-        path: "Signup",
+        path: "signup",
         element: <Signup/>
       },
       {
-        path: "Login",
+        path: "login",
         element: <Login/>
       },
       {
-        path:"Deals/:id",
+        path:"deals/:id",
         element: <Dealdetails/>
       },
       {
-        path:"Catagories/:id",
+        path:"catagories/:id",
         element: <CatagoryDetails/>
       },
       {
