@@ -2,8 +2,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
+import Loader from '/loader.gif'
 
 const Home = () => {
+
+  console.log(Loader)
 
   console.log("page loaded")
 
@@ -16,9 +19,9 @@ const Home = () => {
 
   useEffect(() => {
     fetch('https://capital-one-clone-api.vercel.app/deals/', { mode: "cors" })
-        .then(response => response.json())
-        .then(data => setDeals(data.data))
-        .catch(error => console.error(error))
+      .then(response => response.json())
+      .then(data => setDeals(data.data))
+      .catch(error => console.error(error))
   }, [])
 
   // Get Categories
@@ -26,15 +29,24 @@ const Home = () => {
   useEffect(() => {
 
     fetch('https://capital-one-clone-api.vercel.app/catagories/', { mode: "cors" })
-        .then(response => response.json())
-        .then(data => setCatagories(data.data))
-        .catch(error => console.error(error))
+      .then(response => response.json())
+      .then(data => setCatagories(data.data))
+      .catch(error => console.error(error))
 
   }, [])
 
   return (
     <>
-      <section>
+
+      
+
+      <section className="w-screen overflow-x-hidden">
+
+        {/* Loader  */}
+      {/* <div className="w-full min-h-screen bg-white flex items-center justify-center">
+        <img src={Loader} alt="" />
+      </div> */}
+
         {/* section 1 */}
         <div className="flex flex-col items-center py-20 space-y-4">
           <h1 className="text-5xl">Get deals on small business essentials</h1>
@@ -44,15 +56,15 @@ const Home = () => {
         </div>
 
         {/* section 2 */}
-        <div className="w-4/5 m-auto flex flex-col justify-center items-center space-y-10">
+        <div className=" md:w-4/5 md:m-auto flex flex-col justify-center items-center md:space-y-10">
 
-          <div className="md:grid grid-cols-4 gap-8">
+          <div className="md:grid md:grid-cols-4 md:gap-8 flex overflow-x-scroll w-screen">
 
             {/* Cards */}
 
             {topDeals.map((data) => {
               return (
-                <div key={data._Id} className="bg-white rounded-md shadow-md flex flex-col items-center text-center py-6 space-y-4">
+                <div key={data._Id} className="bg-white rounded-md shadow-md flex flex-col items-center text-center py-6 space-y-4 w-screen ">
                   <img src={data.supplierImage} alt="" className="w-48" />
                   <p className="text-sm uppercase font-bold text-[#1E6A0B] border-t border-b w-full py-2 ">{data.discountMessage}</p>
                   <p className="text-sm font-medium">{data.title}</p>
@@ -67,9 +79,9 @@ const Home = () => {
         </div>
 
         {/* section 3 */}
-        <div className="w-4/5 m-auto flex flex-col justify-center items-center space-y-10 py-16">
+        <div className="md:w-4/5 w-full m-auto flex flex-col justify-center items-center space-y-10 py-16">
           <h1 className="text-[32px]">How Capital One Business Deals Works</h1>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 overflow-x-scroll w-full">
 
             <div className="flex flex-col items-start justify-between space-y-4 bg-white rounded-md p-6 border w-1/3">
               <img src="https://businessdeals.capitalone.com/img/grv-primary-rewards.svg" alt="" />
@@ -123,7 +135,6 @@ const Home = () => {
 
           <div className="flex space-x-8">
             {/* card */}
-
             {topCatagories.map((data) => {
               return (
                 <div key={data._id} className="w-fit text-center space-y-4 bg-white rounded-md shadow-md">

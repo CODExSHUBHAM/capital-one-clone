@@ -5,9 +5,11 @@ import { Outlet } from "react-router-dom"
 function App() {
   return (
     <>
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
+      <div className="overflow-x-hidden">
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
     </>
   )
 }
