@@ -26,7 +26,7 @@ const Home = () => {
     }
 
     return () => getDeals();
-  }, [])
+  },)
 
   const topDeals = deals.slice(0, 8);
 
