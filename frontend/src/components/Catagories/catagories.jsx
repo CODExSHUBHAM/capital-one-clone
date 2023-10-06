@@ -9,13 +9,13 @@ const Catagories = () => {
 
     const getData = () => {
 
-      fetch('https://capital-one-clone-api.vercel.app/catagories',{mode : "cors"})
+      fetch('https://capital-one-clone-api.vercel.app/catagories', { mode: "cors" })
         .then(response => response.json())
         .then(data => setCatagories(data.data))
         .catch(error => console.error(error));
     }
 
-    return () => getData();
+    return getData();
   }, [])
 
 
