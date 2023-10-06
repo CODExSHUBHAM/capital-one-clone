@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "deals",
-        element: <Deals/>
+        element: "www.google.com"
       },
       {
         path: "catagories",

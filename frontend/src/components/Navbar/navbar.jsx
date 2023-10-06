@@ -39,7 +39,7 @@ const Navbar = () => {
         <Link to='/'><img src={logo} alt="logo" className='w-48' /></Link>
         <nav>
           <ul className='flex space-x-10'>
-            <NavLink to='deals' className='hover:text-blue-600' >Deals</NavLink>
+            <NavLink to='/deals' className='hover:text-blue-600' >Deals</NavLink>
             <NavLink to='/catagories' className='hover:text-blue-600'>Categories</NavLink>
             <NavLink to='/resources' className='hover:text-blue-600'>Resources</NavLink>
           </ul>
