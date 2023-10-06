@@ -42,7 +42,7 @@ const Deals = () => {
   useEffect(() => {
     const getData = () => {
 
-      fetch('https://capital-one-clone-api.vercel.app/deals',{mode : "cors"})
+      fetch('https://capital-one-clone-api.vercel.app/deals', { mode: "cors" })
         .then(response => response.json())
         .then(data => setDeals(data.data))
         .catch(error => console.error(error));
@@ -54,7 +54,7 @@ const Deals = () => {
   useEffect(() => {
     const getData2 = () => {
 
-      fetch('https://capital-one-clone-api.vercel.app/deals',{mode : "cors"})
+      fetch('https://capital-one-clone-api.vercel.app/deals', { mode: "cors" })
         .then(response => response.json())
         .then(data => setFilteredDeals(data.data))
         .catch(error => console.error(error));

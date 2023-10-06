@@ -15,7 +15,7 @@ const Resources = () => {
         .catch(error => console.error(error));
     }
 
-    return () => getData();
+    return getData();
   }, [])
 
   return (
