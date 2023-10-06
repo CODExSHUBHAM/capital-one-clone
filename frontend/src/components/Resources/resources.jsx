@@ -9,7 +9,7 @@ const Resources = () => {
 
     const getData = () => {
 
-      fetch('https://capitalone-api.vercel.app/articles')
+      fetch('https://capital-one-clone-api.vercel.app/articles',{mode: "cors"})
         .then(response => response.json())
         .then(data => setArticles(data.data))
         .catch(error => console.error(error));
