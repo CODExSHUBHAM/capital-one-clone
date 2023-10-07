@@ -97,10 +97,10 @@ const Deals = () => {
           <hr className="border-black" />
         </nav>
 
-        <div className="flex w-10/12 m-auto">
+        <div className="md:flex w-10/12 m-auto">
 
           {/* 1st Half */}
-          <section className="w-fit flex flex-col p-10 ">
+          <section className="md:w-fit w-full flex flex-col p-10 ">
             <div className="w-fit">
               <div className="flex justify-between">
                 <h1 className="text-xl font-semibold">Filter</h1>
@@ -186,22 +186,22 @@ const Deals = () => {
           </section>
 
           {/* 2nd Half */}
-          <section className="w-2/3 flex flex-col p-10 space-y-6">
+          <section className="md:w-2/3 flex flex-col md:p-10 space-y-6">
             <p className="font-medium"> {filteredDeals.length} results</p>
             {/* card */}
             {filteredDeals.map((data, key) => {
               return (
-                <div key={key} className="flex space-x-8 border w-full p-4 rounded-md bg-white">
-                  <img src={data.supplierImage} alt="" className="w-1/4 border-2 rounded md" />
+                <div key={key} className="flex flex-col md:flex-row space-y-4 space-x-8 border w-full p-4 rounded-md bg-white md:text-left text-center items-center">
+                  <img src={data.supplierImage} alt="" className="md:w-1/4 w-2/4 border-2 rounded md" />
 
-                  <div className="flex flex-col space-y-2 w-2/4">
-                    <p className="font-bold text-[#1E6A0B] w-3/5">{data.discountMessage}</p>
+                  <div className="flex flex-col items-center md:items-start space-y-2 md:w-2/4">
+                    <p className="font-bold text-[#1E6A0B] md:w-3/5">{data.discountMessage}</p>
                     <p className="font-bold">{data.title}</p>
                   </div>
 
-                  <div className="w-1/4 flex flex-col items-end">
+                  <div className="md:w-1/4 w-full flex flex-col md:items-end">
                     <Link to={`/deals/${data.promotionId}`}>
-                      <button className=" bg-blue-600 px-8 py-1 rounded-md text-white font-bold">More Info</button>
+                      <button className=" bg-blue-600 px-8 py-1 rounded-md text-white font-bold w-full">More Info</button>
                     </Link>
                   </div>
                 </div>

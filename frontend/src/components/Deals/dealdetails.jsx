@@ -9,32 +9,18 @@ const Dealdetails = () => {
   const filteredDeals = deals.filter(item => item.promotionId == id.id)
   const topDeals = deals.slice(0, 4);
 
-  console.log("hello")
-
-  // useEffect(() => {
-  //   const getData = () => {
-
-  //     return fetch('https://capital-one-clone-api.vercel.app/deals',{mode : "cors"})
-  //       .then(response => response.json())
-  //       .then(data => setDeals(data.data))
-  //       .catch(error => console.error(error));
-  //   }
-
-  //   return getData();
-  // }, [])
-
   useEffect(() => {
     fetch('https://capital-one-clone-api.vercel.app/deals/', { mode: "cors" })
-        .then(response => response.json())
-        .then(data => setDeals(data.data))
-        .catch(error => console.error(error))
+      .then(response => response.json())
+      .then(data => setDeals(data.data))
+      .catch(error => console.error(error))
   }, [])
 
   return (
     <>
       <div>
 
-        <nav className="w-11/12 m-auto py-6 px-16 flex flex-col space-y-3">
+        <nav className="w-11/12 m-auto py-6 md:px-16 flex flex-col space-y-3">
           <div className="flex space-x-1 text-xs">
             <Link to='/' className="font-bold text-blue-600 hover:underline">Home</Link>
             <p> &gt; </p>
@@ -47,7 +33,7 @@ const Dealdetails = () => {
         {
           filteredDeals.map((deal) => {
             return (
-              <div key={deal.id} className="w-10/12 m-auto">
+              <div key={deal.id} className="w-10/12 m-auto hidden md:block">
 
                 <div className="flex justify-between">
 
@@ -80,39 +66,75 @@ const Dealdetails = () => {
           })
         }
 
+        {
+          filteredDeals.map((deal) => {
+            return (
+              <div key={deal.id} className=" m-auto md:hidden">
+
+                <img src={deal.modalImage} className="rounded-md shadow-sm" />
+
+                <div className="flex flex-col justify-between">
+                  <div className="flex flex-col items-center w-11/12 m-auto -mt-10 text-center  bg-white border rounded-md py-6 px-4">
+                    <img src={deal.supplierImage} alt="" className="" />
+                    <p className="w-4/5">{deal.description.slice(0, 120)}</p>
+                  </div>
+                </div>
+
+                <div className="mx-auto my-8 p-6 bg-white flex flex-col w-11/12 rounded-md">
+
+                  <div className="space-y-2">
+                    <p className="text-sm text-[#25810e] uppercase font-bold">{deal.discountMessage}</p>
+                    <p className="text-xl font-semibold">{deal.title}</p>
+                    <p className="blur-sm">{deal.description}</p>
+                  </div>
+
+                  <div className="w-full pt-10">
+                    <Link to='/signup' className="bg-[#25810e] px-8 w-full py-3 rounded-md  text-white font-bold" >
+                      Join For Free to Unlock
+                    </Link>
+                  </div>
+
+                </div>
+              </div>
+            )
+          })
+        }
+
         {/* section 2 */}
-        <div className="w-4/5 m-auto flex flex-col justify-center items-center space-y-10 py-16">
-          <h1 className="text-[32px]">How Capital One Business Deals Works</h1>
-          <div className="flex space-x-4">
+        <div className="flex flex-col space-y-6 py-16">
+          <h1 className="text-[32px] self-center text-center">How Capital One Business Deals Works</h1>
+          <div className="md:w-4/5 w-full m-auto flex flex-col justify-center md:items-center overflow-x-scroll md:overflow-auto">
+            <div className="flex space-x-4 w-max md:w-auto p-6">
 
-            <div className="flex flex-col items-start justify-between space-y-4 bg-white rounded-md p-6 border w-1/3">
-              <img src="https://businessdeals.capitalone.com/img/grv-primary-rewards.svg" alt="" />
-              <p className="text-xl font-bold">Sign Up for FREE</p>
-              <p className="text-base ">No Capital One account required. Sign up for free to start saving on the things your small business needs the most.</p>
-              <Link className="text-base bg-blue-600 font-bold text-white py-1 px-4 rounded-md">Join for Free</Link>
-            </div>
+              <div className="flex flex-col items-start justify-between space-y-4 bg-white rounded-md p-6 border w-[300px] md:w-1/3">
+                <img src="https://businessdeals.capitalone.com/img/grv-primary-rewards.svg" alt="" />
+                <p className="text-xl font-bold">Sign Up for FREE</p>
+                <p className="text-base ">No Capital One account required. Sign up for free to start saving on the things your small business needs the most.</p>
+                <Link className="text-base bg-blue-600 font-bold text-white py-1 px-4 rounded-md">Join for Free</Link>
+              </div>
 
-            <div className="flex flex-col items-start justify-between space-y-4 bg-white rounded-md p-6 border w-1/3">
-              <img src="https://businessdeals.capitalone.com/img/grv-primary-branch.svg" alt="" />
-              <p className="text-xl font-bold">Business Savings Made Easy</p>
-              <p className="text-base ">Capital One Business Deals makes it easy for you to save on business purchases. Learn more about how we work, and more importantly, how we help you.</p>
-              <Link className="text-base text-blue-600 font-semibold">Learn More &gt;</Link>
-            </div>
+              <div className="flex flex-col items-start justify-between space-y-4 bg-white rounded-md p-6 border w-[300px] md:w-1/3">
+                <img src="https://businessdeals.capitalone.com/img/grv-primary-branch.svg" alt="" />
+                <p className="text-xl font-bold">Business Savings Made Easy</p>
+                <p className="text-base ">Capital One Business Deals makes it easy for you to save on business purchases. Learn more about how we work, and more importantly, how we help you.</p>
+                <Link className="text-base text-blue-600 font-semibold">Learn More &gt;</Link>
+              </div>
 
-            <div className="flex flex-col items-start justify-between space-y-4 bg-white rounded-md p-6 border w-1/3">
-              <img src="https://businessdeals.capitalone.com/img/grv-primary-interest-rate.svg" alt="" />
-              <p className="text-xl font-bold">100+ Deals At Your Fingertips</p>
-              <p className="text-base ">Get discounts on shipping, office furniture, travel and so much more. We have over 100 deals from leading brands, and are adding more every day.</p>
-              <Link className="text-base text-blue-600 font-semibold">Find Savings &gt;</Link>
+              <div className="flex flex-col items-start justify-between space-y-4 bg-white rounded-md p-6 border w-[300px] md:w-1/3">
+                <img src="https://businessdeals.capitalone.com/img/grv-primary-interest-rate.svg" alt="" />
+                <p className="text-xl font-bold">100+ Deals At Your Fingertips</p>
+                <p className="text-base ">Get discounts on shipping, office furniture, travel and so much more. We have over 100 deals from leading brands, and are adding more every day.</p>
+                <Link className="text-base text-blue-600 font-semibold">Find Savings &gt;</Link>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Section 3 */}
         <div className="bg-white">
-          <div className="w-3/5 m-auto flex flex-col justify-center items-center space-y-10 py-16">
-            <h1 className="text-4xl font-thin">Join Capital One Business Deals and Save Effortlessly</h1>
-            <div className="w-2/5 items-center flex flex-col">
+          <div className="md:w-3/5 w-11/12 m-auto flex flex-col justify-center items-center space-y-10 py-16">
+            <h1 className="text-4xl font-thin text-center">Join Capital One Business Deals and Save Effortlessly</h1>
+            <div className="md:w-2/5 w-11/12 items-center flex flex-col">
               <div>
                 <p className="text-sm mb-2">Email Address</p>
                 <input type="text" className="w-full p-3 border border-black rounded-md mb-2" />
@@ -134,19 +156,20 @@ const Dealdetails = () => {
             <p className="text-xl font-semibold">Related Deals</p>
             <Link to='/Deals' className="text-base text-blue-500 font-semibold">View All Deals &gt;</Link>
           </div>
+          <div className="overflow-x-scroll md:overflow-auto">
+            <div className="flex space-x-8 w-max md:w-auto">
+              {/* card */}
 
-          <div className="flex space-x-8">
-            {/* card */}
-
-            {topDeals.map((data) => {
-              return (
-                <div key={data._id} className="w-fit text-center space-y-4 bg-white rounded-md shadow-md">
-                  <img src={data.supplierImage} alt="" className="w-[256px] h-[150px] object-cover" />
-                  <p className="text-sm uppercase font-bold">{data.discountMessage}</p>
-                  <p className="pb-4">{data.title}</p>
-                </div>
-              )
-            })}
+              {topDeals.map((data) => {
+                return (
+                  <div key={data._id} className="flex flex-col items-center justify-center w-fit text-center space-y-4 bg-white rounded-md shadow-md">
+                    <img src={data.supplierImage} alt="" className="md:w-[256px] md:h-[150px] w-6/12 mx-auto object-cover" />
+                    <p className="text-sm uppercase font-bold">{data.discountMessage}</p>
+                    <p className="pb-4">{data.title}</p>
+                  </div>
+                )
+              })}
+            </div>
           </div>
 
         </div>
