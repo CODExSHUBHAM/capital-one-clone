@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
-// import Loader from '/loader.gif'
 
 const Home = () => {
 
@@ -38,14 +37,7 @@ const Home = () => {
   return (
     <>
 
-
-
       <section className="w-screen overflow-x-hidden">
-
-        {/* Loader  */}
-        {/* <div className="w-full min-h-screen bg-white flex items-center justify-center">
-        <img src={Loader} alt="" />
-      </div> */}
 
         {/* section 1 */}
         <div className="flex flex-col items-center py-10 md:py-20 space-y-4 w-11/12 m-auto md:w-auto text-center">
