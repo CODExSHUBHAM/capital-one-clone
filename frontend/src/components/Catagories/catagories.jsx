@@ -99,6 +99,7 @@ const Catagories = () => {
           </div>
 
         </section>
+
       </div>
     </div>
   )
