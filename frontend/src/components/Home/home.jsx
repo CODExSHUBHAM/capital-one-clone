@@ -57,11 +57,11 @@ const Home = () => {
 
               {topDeals.map((data) => {
                 return (
-                  <div key={data._Id} className="bg-white rounded-md shadow-md flex flex-col items-center text-center py-6 px-4 space-y-4">
+                  <Link to={`/deals/${data.promotionId}`} key={data._Id} className="bg-white rounded-md shadow-md flex flex-col items-center text-center py-6 px-4 space-y-4">
                     <img src={data.supplierImage} alt="" className="w-48" />
                     <p className="text-sm uppercase font-bold text-[#1E6A0B] border-t border-b w-full py-2 ">{data.discountMessage}</p>
                     <p className="text-sm font-medium">{data.title}</p>
-                  </div>
+                  </Link>
                 )
               })}
 
@@ -132,11 +132,11 @@ const Home = () => {
             {/* card */}
             {topCatagories.map((data) => {
               return (
-                <div key={data._id} className="w-fit text-center space-y-4 bg-white rounded-md shadow-md">
+                <Link to={`/catagories/${data._id}`} key={data._id} className="w-fit text-center space-y-4 bg-white rounded-md shadow-md">
                   <img src={data.image} alt="" className="w-[256px] h-[150px] object-cover" />
                   <p className="text-sm uppercase font-bold">{data.category}</p>
                   <p className="pb-4">{data.subcategory}</p>
-                </div>
+                </Link>
               )
             })}
           </div>
