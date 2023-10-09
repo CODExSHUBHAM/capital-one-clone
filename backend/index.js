@@ -152,7 +152,7 @@ const articles = new mongoose.Schema({
         required: true,
     },
     isFeatured: {
-        type: Boolean,
+        type: String,
         required: true,
     }
 
@@ -171,7 +171,6 @@ app.use(cors());
 app.get("/", (req, resp) => {
 
     resp.send("App is Working");
-    console.log(resp)
 
 });
 
@@ -213,6 +212,22 @@ app.get("/articles", async (req, res) => {
 
         return res.status(200).json({
             success: true,
+            count: article.length,
+            data: article,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: 'server error' });
+    }
+})
+
+app.get("/farticles", async (req, res) => {
+
+    try {
+        const article = await Articles.find({isFeatured:"true"});
+
+        return res.status(200).json({
+            succesclss: true,
             count: article.length,
             data: article,
         });

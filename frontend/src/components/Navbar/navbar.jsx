@@ -4,7 +4,8 @@ import { CiUser } from 'react-icons/ci'
 import { Link, NavLink } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrClose } from 'react-icons/gr'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+
 
 
 const Navbar = () => {
@@ -27,6 +28,9 @@ const Navbar = () => {
   //     close.current.classList.add('hidden')
   //   }
   // }
+  useEffect(()=>{
+    ref.current.classList.add('hidden')
+  },[])
 
   const toggleMenu = () => {
     if (ref.current.classList.contains('hidden')) {
