@@ -40,11 +40,11 @@ const Resources = () => {
         <div className="hidden  w-full py-4 px-40 bg-white border-b md:flex justify-between">
           <Link to='/resources' className="font-semibold">Resources</Link>
           <div className="flex space-x-8">
-            <Link className="text-sm hover:underline hover:text-blue-600 font-medium">Procurement Overview</Link>
-            <Link className="text-sm hover:underline hover:text-blue-600 font-medium">Negosiation</Link>
-            <Link className="text-sm hover:underline hover:text-blue-600 font-medium">Supplier Management</Link>
-            <Link className="text-sm hover:underline hover:text-blue-600 font-medium">Contracts</Link>
-            <Link className="text-sm hover:underline hover:text-blue-600 font-medium">Spend Catedories</Link>
+            <Link to='procurementoverview' className="text-sm hover:underline hover:text-blue-600 font-medium">Procurement Overview</Link>
+            <Link to='negosiation' className="text-sm hover:underline hover:text-blue-600 font-medium">Negosiation</Link>
+            <Link to='suppliermanagement' className="text-sm hover:underline hover:text-blue-600 font-medium">Supplier Management</Link>
+            <Link to='contracts' className="text-sm hover:underline hover:text-blue-600 font-medium">Contracts</Link>
+            <Link to='spendcategories' className="text-sm hover:underline hover:text-blue-600 font-medium">Spend Catedories</Link>
           </div>
         </div>
 
@@ -55,11 +55,11 @@ const Resources = () => {
           <h1 onClick={expandSections} className="text-blue-600">Sections</h1>
         </div>
         <div ref={ref} className="space-x-8 min-h-screen hidden flex-col item p-4 bg-white ">
-          <Link className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Procurement Overview</Link>
-          <Link className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Negosiation</Link>
-          <Link className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Supplier Management</Link>
-          <Link className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Contracts</Link>
-          <Link className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Spend Catedories</Link>
+          <Link to='procurementoverview' className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Procurement Overview</Link>
+          <Link to='negosiation' className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Negosiation</Link>
+          <Link to='suppliermanagement' className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Supplier Management</Link>
+          <Link to='contracts' className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Contracts</Link>
+          <Link to='' className='hover:text-blue-600 flex justify-between items-center px-2 py-6 text-left border-b '>Spend Catedories</Link>
         </div>
 
 

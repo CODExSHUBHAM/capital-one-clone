@@ -12,6 +12,11 @@ import Login from './components/LogIn/login.jsx'
 import Dealdetails from './components/Deals/dealdetails.jsx'
 import CatagoryDetails from './components/Catagories/catagorydetails.jsx'
 import Resourcedetails from './components/Resources/resourcedetails.jsx'
+import Contracts from './components/FeaturedArticles/contracts.jsx'
+import Negosiation from './components/FeaturedArticles/negosiation.jsx'
+import Procurementoverview from './components/FeaturedArticles/procurementoverview.jsx'
+import Spendcategories from './components/FeaturedArticles/spendcategories.jsx'
+import Suppliermanagement from './components/FeaturedArticles/suppliermanagement.jsx'
 
 const router = createBrowserRouter([
   {
@@ -53,6 +58,26 @@ const router = createBrowserRouter([
       {
         path:"Resources/:id",
         element: <Resourcedetails/>
+      },
+      {
+        path:"Resources/suppliermanagement",
+        element: <Suppliermanagement/>
+      },
+      {
+        path:"Resources/spendcategories",
+        element: <Spendcategories/>
+      },
+      {
+        path:"Resources/procurementoverview",
+        element: <Procurementoverview/>
+      },
+      {
+        path:"Resources/negosiation",
+        element: <Negosiation/>
+      },
+      {
+        path:"Resources/contracts",
+        element: <Contracts/>
       },
     ]
   }
