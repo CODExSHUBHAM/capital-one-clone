@@ -69,8 +69,8 @@ const Navbar = () => {
         </nav>
         <div className='flex space-x-5 items-center'>
           <span><AiOutlineSearch className='text-xl' /></span>
-          <NavLink className='flex items-center' to='/signup'><CiUser className='text-xl' />Sign In</NavLink>
-          <NavLink className='bg-[#25810E] px-6 py-1 rounded-sm font-bold text-white' to='/login'>Join</NavLink>
+          <NavLink className='flex items-center' to='/login'><CiUser className='text-xl' />Sign In</NavLink>
+          <NavLink className='bg-[#25810E] px-6 py-1 rounded-sm font-bold text-white' to='/signup'>Join</NavLink>
         </div>
       </div>
 
@@ -104,7 +104,7 @@ const Navbar = () => {
         </ul>
         <div className='space-y-6'>
           <h1 className='text-xl font-semibold text-center'>Not a Capital One Budiness Deals member? join for free to start saving.</h1>
-          <button className='bg-[#25810E] px-6 py-4 text-xl rounded-md font-normal text-white w-11/12 mx-auto'><Link to='/login'>Join</Link></button>
+          <button className='bg-[#25810E] px-6 py-4 text-xl rounded-md font-normal text-white w-11/12 mx-auto'><Link to='/signup'>Join</Link></button>
         </div>
         <div className='space-y-8'>
           <h1 className='text-base text-gray-500 font-medium'>Are you a returning Business Deals Member? Join for free to start saving</h1>
