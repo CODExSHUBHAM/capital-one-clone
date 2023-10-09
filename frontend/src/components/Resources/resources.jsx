@@ -91,12 +91,12 @@ const Resources = () => {
 
             {articles.map((data) => {
               return (
-                <div className="w-fit space-y-4 rounded-md shadow-md" key={data._id}>
+                <Link to={`/resources/${data._id}`} className="w-fit space-y-4 rounded-md shadow-md" key={data._id}>
                   <img src={data.categoryImage} alt="" className="w-[352px] h-[176px] object-cover" />
                   <p className="text-sm px-3 pb-4 uppercase font-bold">{data.category}</p>
                   <p className="text-2xl px-3 pb-4 font-light w-10/12">{data.title}</p>
                   <p className="text-xs px-3 pb-4 font-bold"> {data.visibleDate}  | {data.readTime}</p>
-                </div>
+                </Link>
               )
             })}
 
