@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import {BsXCircleFill} from 'react-icons/bs'
+import { BsXCircleFill } from 'react-icons/bs'
 
 const Signup = () => {
   return (
@@ -46,31 +46,31 @@ const Signup = () => {
             <div className="w-full px-8 py-12 bg-[#F4F4F4] flex flex-col items-start space-y-4">
               <h1 className="font-bold">Password Requirements</h1>
               <div className="flex space-x-3 items-center">
-                <BsXCircleFill/>
+                <BsXCircleFill />
                 <p className="font-medium">8 - 32 characters</p>
               </div>
               <div className="flex space-x-3 items-center">
-                <BsXCircleFill/>
+                <BsXCircleFill />
                 <p className="font-medium">Minimum one letter and one number</p>
               </div>
               <div className="flex space-x-3 items-center">
-                <BsXCircleFill/>
+                <BsXCircleFill />
                 <p className="font-medium">No Spaces</p>
               </div>
               <div className="flex space-x-3 items-start">
-                <BsXCircleFill/>
+                <BsXCircleFill />
                 <p className="font-medium text-left">Use only alphanumeric characters and the following symbols: - _ . / \@ $ * & ! #</p>
               </div>
               <div className="flex space-x-3 items-center">
-                <BsXCircleFill/>
+                <BsXCircleFill />
                 <p className="font-medium">Password confirmation matches</p>
               </div>
             </div>
             <div className="flex items-start space-x-2 pb-16">
               <input type="checkbox" className="text-xl p-6" />
-              <p className="text-left text-sm">By creating an account, you agree to Business Deals' Terms & Conditions of Use and Privacy Statement. Please note when you provide your email address, we may use it to send important information about your account(s), as well as other useful products and services.</p>
+              <p className="text-left text-sm">By creating an account, you agree to Business Deals Terms & Conditions of Use and Privacy Statement. Please note when you provide your email address, we may use it to send important information about your account(s), as well as other useful products and services.</p>
             </div>
-            <Link className='bg-[#25810E] px-16 py-3 rounded-sm text-white' to='/signup'>Sign Up</Link>
+            x`x`
           </div>
         </div>
       </div>
