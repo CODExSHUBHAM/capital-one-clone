@@ -42,34 +42,34 @@ const Navbar = () => {
         <div className='flex justify-between p-6 items-center border bg-white md:hidden text-base font-optimistr'>
 
           {/* Hamburger  */}
-          <button className='text-2xl text-black' onClick={toggleMenu}>
+          <button className='text-lg text-black' onClick={toggleMenu}>
             {open == true ? <FaTimes /> : <FaBars />}
           </button>
 
           {/* Logo  */}
-          <Link to='/'><img src={logo} alt="logo" className='w-48' /></Link>
+          <Link to='/'><img src={logo} alt="logo" className='w-44' /></Link>
 
           {/* Sign In  */}
-          <NavLink className='flex flex-col items-center justify-center' to='/signup'><CiUser className='text-xl' />Sign In</NavLink>
+          <NavLink className='flex flex-col items-center justify-center text-xs' to='/signup'><CiUser className='text-lg' />Sign In</NavLink>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {open ? (
         <div className='items-center bg-white absolute w-full h-screen top-18 z-10 p-6 md:hidden text-center space-y-10 text-base font-optimistr'>
-          <ul className='flex flex-col text-2xl text-gray-600'>
+          <ul className='flex flex-col text-[#141414]'>
             <p className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Search <span className='text-2xl font-light'><AiOutlineSearch /></span></p>
-            <NavLink to='/deals' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Deals <span className='text-2xl font-light'>&gt;</span></NavLink>
-            <NavLink to='/catagories' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Categories<span className='text-2xl font-light'>&gt;</span></NavLink>
-            <NavLink to='/resources' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Resources<span className='text-2xl font-light'>&gt;</span></NavLink>
+            <NavLink to='/deals' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Deals <img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <NavLink to='/catagories' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Categories<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <NavLink to='/resources' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Resources<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
           </ul>
           <div className='space-y-6'>
-            <h1 className='text-xl font-semibold text-center'>Not a Capital One Budiness Deals member? join for free to start saving.</h1>
-            <button className='bg-[#25810E] px-6 py-4 text-xl rounded-md font-normal text-white w-11/12 mx-auto'><Link to='/signup'>Join</Link></button>
+            <h1 className='text-lg font-optimistsb text-center'>Not a Capital One Budiness Deals member? join for free to start saving.</h1>
+            <button className='bg-[#25810E] px-6 py-3 text-xl rounded-md font-normal text-white w-11/12 mx-auto'><Link to='/signup'>Join</Link></button>
           </div>
           <div className='space-y-8'>
-            <h1 className='text-base text-gray-500 font-medium'>Are you a returning Business Deals Member? Join for free to start saving</h1>
-            <Link to='/login' className='text-lg text-blue-600 '>Sign In &gt; </Link>
+            <h1 className='text-[#141414]'>Are you a returning Business Deals Member? Join for free to start saving</h1>
+            <Link to='/login' className=' text-blue-600 '>Sign In &gt; </Link>
           </div>
         </div>
       ) : null}
