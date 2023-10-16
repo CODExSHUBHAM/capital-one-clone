@@ -20,16 +20,16 @@ const Navbar = () => {
     <>
       {/* Desktop Nav */}
       <div className='border-b bg-white hidden md:flex'>
-        <div className='md:flex items-center justify-between py-6 w-4/5 m-auto border-b bg-white hidden'>
+        <div className='md:flex items-center justify-between py-4 w-4/5 m-auto border-b bg-white hidden'>
           <Link to='/'><img src={logo} alt="logo" className='w-48' /></Link>
-          <nav>
+          <nav className='text-base font-optimistr'>
             <ul className='flex space-x-10'>
               <NavLink to='/deals' className='hover:text-blue-600' >Deals</NavLink>
               <NavLink to='/catagories' className='hover:text-blue-600'>Categories</NavLink>
               <NavLink to='/resources' className='hover:text-blue-600'>Resources</NavLink>
             </ul>
           </nav>
-          <div className='flex space-x-5 items-center'>
+          <div className='flex space-x-5 items-center text-base font-optimistr'>
             <span><AiOutlineSearch className='text-xl' /></span>
             <NavLink className='flex items-center' to='/login'><CiUser className='text-xl' />Sign In</NavLink>
             <NavLink className='bg-[#25810E] px-6 py-1 rounded-sm font-bold text-white' to='/signup'>Join</NavLink>
@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* mobile Nav  */}
       <div>
-        <div className='flex justify-between p-6 items-center border bg-white md:hidden'>
+        <div className='flex justify-between p-6 items-center border bg-white md:hidden text-base font-optimistr'>
 
           {/* Hamburger  */}
           <button className='text-2xl text-black' onClick={toggleMenu}>
@@ -56,7 +56,7 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {open ? (
-        <div className='items-center bg-white absolute w-full h-screen top-18 z-10 p-6 md:hidden text-center space-y-10'>
+        <div className='items-center bg-white absolute w-full h-screen top-18 z-10 p-6 md:hidden text-center space-y-10 text-base font-optimistr'>
           <ul className='flex flex-col text-2xl text-gray-600'>
             <p className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Search <span className='text-2xl font-light'><AiOutlineSearch /></span></p>
             <NavLink to='/deals' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Deals <span className='text-2xl font-light'>&gt;</span></NavLink>

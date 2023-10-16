@@ -3,8 +3,53 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Optimist";
-    src: url('/public/Optimist_W_Bd.woff');
+    font-family: "Optimist-xl";
+    src: url('/public//Fonts/Optimist_W_XLt.woff');
+}
+
+@font-face {
+    font-family: "Optimist-l";
+    src: url('/public/Fonts/Optimist_W_Lt.woff');
+}
+
+@font-face {
+    font-family: "Optimist-r";
+    src: url('/public/Fonts/Optimist_W_Rg.woff');
+}
+
+@font-face {
+    font-family: "Optimist-sb";
+    src: url('/public/Fonts/Optimist_W_SBd.woff');
+}
+
+@font-face {
+    font-family: "Optimist-b";
+    src: url('/public/Fonts/Optimist_W_Bd.woff');
+}
+
+@font-face {
+    font-family: "Optimist-xli";
+    src: url('/public/Fonts/Optimist_W_XLtIt.woff');
+}
+
+@font-face {
+    font-family: "Optimist-li";
+    src: url('/public/Fonts/Optimist_W_LtIt.woff');
+}
+
+@font-face {
+    font-family: "Optimist-ri";
+    src: url('/public/Fonts/Optimist_W_It.woff');
+}
+
+@font-face {
+    font-family: "Optimist-sbi";
+    src: url('/public/Fonts/Optimist_W_SBdIt.woff');
+}
+
+@font-face {
+    font-family: "Optimist-bi";
+    src: url('/public/Fonts/Optimist_W_BdIt.woff');
 }
 
 body {
