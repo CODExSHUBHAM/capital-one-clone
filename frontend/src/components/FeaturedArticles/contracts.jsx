@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 const Contracts = () => {
 
   const [articles, setArticles] = useState([]);
+  const featured = articles.filter(item => item.category == 'Contracts')
 
   useEffect(() => {
 
     const getData = () => {
 
-      fetch('https://capital-one-clone-api.vercel.app/articles', { mode: "cors" })
+      fetch('https://capital-one-clone-api.vercel.app/farticles', { mode: "cors" })
         .then(response => response.json())
         .then(data => setArticles(data.data))
         .catch(error => console.error(error));
@@ -46,7 +47,7 @@ const Contracts = () => {
 
             {/* Cards  */}
 
-            {articles.map((data) => {
+            {featured.map((data) => {
               return (
                 <Link to={`/resources/${data._id}`} className="w-fit space-y-4 rounded-md shadow-md" key={data._id}>
                   <img src={data.categoryImage} alt="" className="w-[352px] h-[176px] object-cover" />
