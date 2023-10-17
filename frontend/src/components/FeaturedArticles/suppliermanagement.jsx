@@ -1,7 +1,9 @@
 
 const Suppliermanagement = () => {
   return (
-    <div>Suppliermanagement</div>
+    <div>
+      Suppliermanagement
+    </div>
   )
 }
 

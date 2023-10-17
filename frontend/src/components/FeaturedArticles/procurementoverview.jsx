@@ -2,7 +2,10 @@
 
 const Procurementoverview = () => {
   return (
-    <div>Procurementoverview</div>
+    <div>
+    
+      Procurementoverview
+    </div>
   )
 }
 

@@ -17,6 +17,7 @@ import Negosiation from './components/FeaturedArticles/negosiation.jsx'
 import Procurementoverview from './components/FeaturedArticles/procurementoverview.jsx'
 import Spendcategories from './components/FeaturedArticles/spendcategories.jsx'
 import Suppliermanagement from './components/FeaturedArticles/suppliermanagement.jsx'
+import Resourcelayout from './components/Resources/resourcelayout.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,33 @@ const router = createBrowserRouter([
       },
       {
         path: "resources",
-        element: <Resources/>
+        element: <Resourcelayout/>,
+        children: [
+          {
+            path: "",
+            element: <Resources/>
+          },
+          {
+            path: "procurementoverview",
+            element: <Procurementoverview/>
+          },
+          {
+            path: "negosiation",
+            element: <Negosiation/>
+          },
+          {
+            path: "suppliermanagement",
+            element: <Suppliermanagement/>
+          },
+          {
+            path: "contracts",
+            element: <Contracts/>
+          },
+          {
+            path: "spendcategories",
+            element: <Spendcategories/>
+          },
+        ]
       },
       {
         path: "signup",
@@ -54,30 +81,6 @@ const router = createBrowserRouter([
       {
         path:"catagories/:id",
         element: <CatagoryDetails/>
-      },
-      {
-        path:"Resources/:id",
-        element: <Resourcedetails/>
-      },
-      {
-        path:"Resources/suppliermanagement",
-        element: <Suppliermanagement/>
-      },
-      {
-        path:"Resources/spendcategories",
-        element: <Spendcategories/>
-      },
-      {
-        path:"Resources/procurementoverview",
-        element: <Procurementoverview/>
-      },
-      {
-        path:"Resources/negosiation",
-        element: <Negosiation/>
-      },
-      {
-        path:"Resources/contracts",
-        element: <Contracts/>
       },
     ]
   }

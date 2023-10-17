@@ -1,7 +1,10 @@
 
 const Spendcategories = () => {
   return (
-    <div>Spendcategories</div>
+    <div>
+      Spendcategories
+
+    </div>
   )
 }
 

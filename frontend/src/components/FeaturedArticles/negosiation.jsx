@@ -1,7 +1,10 @@
 
 const Negosiation = () => {
   return (
-    <div>Negosiation</div>
+    <div>
+
+      Negosiation
+    </div>
   )
 }
 
