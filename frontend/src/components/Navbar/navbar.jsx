@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* mobile Nav  */}
       <div>
-        <div className='flex justify-between p-6 items-center border bg-white md:hidden text-base font-optimistr'>
+        <div className='flex justify-between p-4 items-center border bg-white md:hidden text-base font-optimistr'>
 
           {/* Hamburger  */}
           <button className='text-lg text-black' onClick={toggleMenu}>
