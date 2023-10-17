@@ -16,6 +16,10 @@ const Navbar = () => {
     console.log(open)
   }
 
+  const resetMenu = () =>{
+    setOpen(false)
+  }
+
   return (
     <>
       {/* Desktop Nav */}
@@ -47,10 +51,10 @@ const Navbar = () => {
           </button>
 
           {/* Logo  */}
-          <Link to='/'><img src={logo} alt="logo" className='w-44' /></Link>
+          <Link to='/' onClick={()=>setOpen(false)}><img src={logo} alt="logo" className='w-44' /></Link>
 
           {/* Sign In  */}
-          <NavLink className='flex flex-col items-center justify-center text-xs' to='/signup'><CiUser className='text-lg' />Sign In</NavLink>
+          <NavLink onClick={resetMenu} className='flex flex-col items-center justify-center text-xs' to='/signup'><CiUser className='text-lg' />Sign In</NavLink>
         </div>
       </div>
 
@@ -59,17 +63,17 @@ const Navbar = () => {
         <div className='items-center bg-white absolute w-full h-screen top-18 z-10 p-6 md:hidden text-center space-y-10 text-base font-optimistr'>
           <ul className='flex flex-col text-[#141414]'>
             <p className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Search <span className='text-2xl font-light'><AiOutlineSearch /></span></p>
-            <NavLink to='/deals' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Deals <img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
-            <NavLink to='/catagories' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Categories<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
-            <NavLink to='/resources' className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Resources<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <NavLink to='/deals' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Deals <img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <NavLink to='/catagories' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Categories<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <NavLink to='/resources' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Resources<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
           </ul>
           <div className='space-y-6'>
             <h1 className='text-lg font-optimistsb text-center'>Not a Capital One Budiness Deals member? join for free to start saving.</h1>
-            <button className='bg-[#25810E] px-6 py-3 text-xl rounded-md font-normal text-white w-11/12 mx-auto'><Link to='/signup'>Join</Link></button>
+            <button onClick={resetMenu} className='bg-[#25810E] px-6 py-3 text-xl rounded-md font-normal text-white w-11/12 mx-auto'><Link to='signup'>Join</Link></button>
           </div>
           <div className='space-y-8'>
             <h1 className='text-[#141414]'>Are you a returning Business Deals Member? Join for free to start saving</h1>
-            <Link to='/login' className=' text-blue-600 '>Sign In &gt; </Link>
+            <Link to='/login' className=' text-blue-600 'onClick={resetMenu}>Sign In &gt; </Link>
           </div>
         </div>
       ) : null}

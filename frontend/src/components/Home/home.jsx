@@ -42,7 +42,7 @@ const Home = () => {
         {/* section 1 */}
         <div className="bg-white py-4">
           <div className="flex flex-col items-center py-6 md:py-20 w-11/12 m-auto md:w-auto text-center">
-            <h1 className="text-[32px] font-optimistl md:text-5xl pb-4">Get deals on small business essentials</h1>
+            <h1 className="text-[32px] font-optimistl md:font-optimistxl md:text-5xl pb-4">Get deals on small business essentials</h1>
             <p className="text-base md:text-xl font-optimistr">Joining is <b>easy</b> and <b>free</b></p>
             <p className="text-base md:text-xl font-optimistr pb-4">No Capital One account required.</p>
             <Link to='/signup' className="text-xl bg-[#25810E] rounded-md font-optimistsb text-white px-4 py-3 w-full md:w-auto">Start Saving</Link>
@@ -125,10 +125,10 @@ const Home = () => {
         </div>
 
         {/* Section 5 */}
-        <div className="md:w-4/5 m-auto flex flex-col justify-center items-center space-y-10 py-16">
+        <div className="md:w-4/5 m-auto flex flex-col justify-center  space-y-10 py-16">
           <div className=" flex  space-x-4 items-center">
-            <p className="font-optimistb">Categories</p>
-            <Link to='/catagories' className="text-base text-[#0276b1] font-optimistb">View All Categories &gt;</Link>
+            <p className="font-optimistsb text-xl">Categories</p>
+            <Link to='/catagories' className="text-base text-[#0276b1] font-optimistr">View All Categories &gt;</Link>
           </div>
 
           <div className="hidden md:flex md:space-x-8">
@@ -137,7 +137,7 @@ const Home = () => {
               return (
                 <Link to={`/catagories/${data._id}`} key={data._id} className="md:w-fit w-full text-center space-y-4 bg-white rounded-md shadow-md">
                   <img src={data.image} alt="" className="md:w-[256px] md:h-[150px] object-cover" />
-                  <p className="text-sm uppercase font-bold">{data.category}</p>
+                  <p className="text-sm uppercase font-optimistsb">{data.category}</p>
                   <p className="pb-4">{data.subcategory}</p>
                 </Link>
               )
@@ -149,7 +149,7 @@ const Home = () => {
               return (
                 <div key={data._id} className="w-fit text-center space-y-4 bg-white rounded-md shadow-md">
                   <img src={data.image} alt="" className="w-[256px] h-[150px] object-cover" />
-                  <p className="text-sm uppercase font-bold">{data.category}</p>
+                  <p className="text-sm uppercase font-optimistsb">{data.category}</p>
                   <p className="pb-4">{data.subcategory}</p>
                 </div>
               )
@@ -162,26 +162,26 @@ const Home = () => {
         <div className="bg-white">
           <div className="w-4/5 m-auto flex flex-col justify-center items-center space-y-10 py-16">
 
-            <h1 className="text-[32px] text-center font-normal">What small business owners are saying about Capital One Business Deals</h1>
+            <h1 className="text-[32px] text-center font-optimistl">What small business owners are saying about Capital One Business Deals</h1>
 
             <div className="flex md:w-4/5 m-auto space-x-4 items-start md:items-center">
               <img src="https://businessdeals.capitalone.com/img/quotation-mark.svg" className="w-10 md:w-auto" alt="" />
-              <p className="text-center ">For as long as it's existed, I've used Capital One Business Deals (formerly known as Spring) to alert me to discounts I wouldn't have known existed. I'm confident I have saved significant dollars with little effort.<br />   Thanks Capital One!</p>
+              <p className="text-center font-optimistr ">For as long as it's existed, I've used Capital One Business Deals (formerly known as Spring) to alert me to discounts I wouldn't have known existed. I'm confident I have saved significant dollars with little effort.<br />   Thanks Capital One!</p>
               <img src="https://businessdeals.capitalone.com/img/quotation-mark.svg" alt="" className="rotate-180 w-10 md:w-auto" />
             </div>
 
-            <div className="flex flex-col md:flex-row items-center space-x-4 space-y-4 w-4/5 md:w-auto text-center">
+            <div className="flex flex-col md:flex-row items-center justify-center space-x-4 space-y-4 w-4/5 md:w-auto text-center">
               <div className="text-xl rounded-full px-5 py-4 bg-[#ccf2fa] font-bold text-[#013dfb]">JS</div>
-              <h1 className="text-xl font-bold">Jon Snyder, Owner, il laboratorio del gelato</h1>
+              <h1 className="text-xl font-optimistsb">Jon Snyder, Owner, il laboratorio del gelato</h1>
             </div>
 
             <div className="flex items-center space-x-4">
-              <AiOutlineArrowLeft className="text-5xl" />
+              <AiOutlineArrowLeft className="text-4xl" />
               <div className="flex items-center space-x-2">
                 <input type="radio" />
                 <input type="radio" />
               </div>
-              <AiOutlineArrowRight className="text-5xl" />
+              <AiOutlineArrowRight className="text-4xl" />
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ const Home = () => {
                 <img src="https://ecm.capitalone.com/ESM/assets/images/home-logo-pilotflying.png" alt="" className="w-52" />
               </div>
             </div>
-            <Link to='/signup' className="w-full md:w-auto text-xl bg-[#25810E] rounded-md font-optimistsb text-white px-4 py-3">Get Free Deals</Link>
+            <Link to='/signup' className="w-full md:w-auto text-xl bg-[#1e6a0b] rounded-md font-optimistr text-white px-4 py-3">Get Free Deals</Link>
           </div>
         </div>
 
