@@ -51,14 +51,14 @@ const Navbar = () => {
         </div>
       </div>
       {
-        open ?(
+        open ? (
           <Search />
-        ):null
+        ) : null
       }
-      
+
 
       {/* mobile Nav  */}
-      <div>
+      <div >
         <div className='flex justify-between px-6 py-4 items-center border bg-white md:hidden text-base font-optimistr'>
 
           {/* Hamburger  */}
@@ -89,20 +89,28 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open ? (
-        <div className='items-center bg-white absolute w-full h-screen top-18 z-10 p-6 md:hidden text-center space-y-10 text-base font-optimistr'>
+        <div className='overflow-hidden items-center bg-white absolute w-full h-screen top-18 z-10 p-6 md:hidden text-center space-y-10 text-base font-optimistr'>
           <ul className='flex flex-col text-[#141414]'>
-            <p className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Search <span className='text-2xl font-light'><AiOutlineSearch /></span></p>
-            <NavLink to='/deals' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Deals <img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
-            <NavLink to='/catagories' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Categories<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
-            <NavLink to='/resources' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Resources<img src="/arrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <p className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Search <span className='text-2xl font-light'>
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='w-[24px]' fill='%23141414'>
+                <path
+                  d='M21.466,19l-5.649-5.466a7.533,7.533,0,1,0-2.508,2.423l5.745,5.557A1.742,1.742,0,0,0,21.466,19ZM3,9.505a6.5,6.5,0,1,1,6.5,6.5A6.51,6.51,0,0,1,3,9.505ZM20.793,20.772a.733.733,0,0,1-.518.226.887.887,0,0,1-.528-.2l-5.6-5.413a7.608,7.608,0,0,0,1.068-1.032l5.554,5.373a.736.736,0,0,1,.227.52A.743.743,0,0,1,20.793,20.772Z' />
+              </svg>
+            </span></p>
+            <NavLink to='/deals' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b ' >Deals <img src="Icons/rightarrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <NavLink to='/catagories' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Categories<img src="Icons/rightarrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
+            <NavLink to='/resources' onClick={resetMenu} className='hover:text-blue-600 flex justify-between items-center px-2 py-3 border-b'>Resources<img src="Icons/rightarrow.svg" className='w-[24px] h-[24px]' alt="icon" /></NavLink>
           </ul>
           <div className='space-y-6'>
-            <h1 className='text-lg font-optimistsb text-center'>Not a Capital One Budiness Deals member? join for free to start saving.</h1>
+            <h1 className='text-lg font-optimistsb text-center'>Not a Capital One Budiness Deals member? Join for free to start saving.</h1>
             <button onClick={resetMenu} className='bg-[#25810E] px-6 py-3 text-xl rounded-md font-normal text-white w-11/12 mx-auto'><Link to='signup'>Join</Link></button>
           </div>
-          <div className='space-y-8'>
-            <h1 className='text-[#141414]'>Are you a returning Business Deals Member? Join for free to start saving</h1>
-            <Link to='/login' className=' text-blue-600 ' onClick={resetMenu}>Sign In &gt; </Link>
+          <div className=''>
+            <h1 className='text-[#141414] pb-2'>Are you a returning Business Deals Member? Join for free to start saving</h1>
+            <Link to='/login' className=' text-blue flex items-center justify-center  ' onClick={resetMenu}>
+              Sign In
+              <img src="Icons/rightarrow.svg" className='w-[14px] ml-2 ' alt="" />
+            </Link>
           </div>
         </div>
       ) : null}

@@ -38,37 +38,38 @@ const Home = () => {
       <section className="w-screen overflow-x-hidden">
 
         {/* section 1 */}
+        <div className="bg-white">
+          <div className="bg-white flex flex-col items-center py-4 md:py-20 w-11/12 m-auto md:w-auto text-center">
+            <h1 className="text-[32px] text-black font-optimistl md:font-optimistxl md:text-5xl pb-4">Get deals on small business essentials</h1>
+            <p className="text-base md:text-xl font-optimistr">Joining is <b>easy</b> and <b>free</b></p>
+            <p className="text-base md:text-xl font-optimistr pb-4">No Capital One account required.</p>
+            <Link to='/signup' className="text-xl bg-[#25810E] rounded-md font-optimistr text-white px-4 py-3 w-full md:w-auto">Start Saving</Link>
+          </div>
 
-        <div className="bg-white flex flex-col items-center py-4 md:py-20 w-11/12 m-auto md:w-auto text-center">
-          <h1 className="text-[32px] text-black font-optimistl md:font-optimistxl md:text-5xl pb-4">Get deals on small business essentials</h1>
-          <p className="text-base md:text-xl font-optimistr">Joining is <b>easy</b> and <b>free</b></p>
-          <p className="text-base md:text-xl font-optimistr pb-4">No Capital One account required.</p>
-          <Link to='/signup' className="text-xl bg-[#25810E] rounded-md font-optimistr text-white px-4 py-3 w-full md:w-auto">Start Saving</Link>
-        </div>
 
+          {/* section 2 */}
+          <div className="bg-white flex flex-col space-y-6 py-4">
+            <div className=" md:w-4/5 md:m-auto flex flex-col md:justify-center md:items-center md:space-y-10 overflow-x-scroll md:overflow-x-auto p-6">
 
-        {/* section 2 */}
-        <div className="bg-white flex flex-col space-y-6 py-4">
-          <div className=" md:w-4/5 md:m-auto flex flex-col md:justify-center md:items-center md:space-y-10 overflow-x-scroll md:overflow-x-auto p-6">
+              <div className="md:grid md:grid-cols-4 gap-8 flex w-max md:w-fit">
 
-            <div className="md:grid md:grid-cols-4 gap-8 flex w-max md:w-fit">
+                {/* Cards */}
 
-              {/* Cards */}
+                {topDeals.map((data) => {
+                  return (
+                    <Link to={`/deals/${data.promotionId}`} key={data._Id} className="w-72 bg-white rounded-md shadow-md flex flex-col items-center text-center py-6 px-4 space-y-4">
+                      <img src={data.supplierImage} alt="" className="w-48" />
+                      <p className="text-sm uppercase font-optimistb text-[#1E6A0B] border-t border-b w-full py-2 ">{data.discountMessage}</p>
+                      <p className="text-sm font-optimistsb">{data.title}</p>
+                    </Link>
+                  )
+                })}
 
-              {topDeals.map((data) => {
-                return (
-                  <Link to={`/deals/${data.promotionId}`} key={data._Id} className="w-72 bg-white rounded-md shadow-md flex flex-col items-center text-center py-6 px-4 space-y-4">
-                    <img src={data.supplierImage} alt="" className="w-48" />
-                    <p className="text-sm uppercase font-optimistb text-[#1E6A0B] border-t border-b w-full py-2 ">{data.discountMessage}</p>
-                    <p className="text-sm font-optimistsb">{data.title}</p>
-                  </Link>
-                )
-              })}
+              </div>
 
             </div>
-
+            <Link to='/deals' className="text-base text-[#0276b1] font-optimistsb self-center">View All Deals &gt;</Link>
           </div>
-          <Link to='/deals' className="text-base text-[#0276b1] font-optimistsb self-center">View All Deals &gt;</Link>
         </div>
 
 
