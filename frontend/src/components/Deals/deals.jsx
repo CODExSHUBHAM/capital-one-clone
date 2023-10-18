@@ -246,8 +246,14 @@ const Deals = () => {
           </section>
 
           {/* 2nd Half */}
-          <section className="w-[75%] flex flex-col space-y-6 p-6">
-            <p className="font-optimistr"> {filteredDeals.length} results</p>
+          <section className="md:w-[75%] flex flex-col space-y-6 md:p-6">
+            <div className="flex justify-between">
+              <p className="font-optimistr"> {filteredDeals.length} results</p>
+              <div className="flex space-x-4 md:hidden">
+                <span className="flex font-optimistl text-blue"><img src="/Icons/filter.svg" className="w-[24px] h-[24px]" alt="" />  Filter</span>
+                <span className="flex font-optimistl text-blue"><img src="/Icons/sort.svg" className="w-[24px] h-[24px]" alt="" />  Sort</span>
+              </div>
+            </div>
             {/* card */}
             {filteredDeals.map((data, key) => {
               return (
