@@ -88,7 +88,7 @@ const Dealdetails = () => {
             return (
               <div key={deal.id} className=" m-auto md:hidden">
 
-                <img src={deal.modalImage} className="rounded-md shadow-sm" />
+                <img src={deal.modalImage} className=" shadow-sm" />
 
                 <div className="flex flex-col justify-between">
                   <div className="flex flex-col items-center w-11/12 m-auto -mt-10 text-center  bg-white border rounded-md py-6 px-4">
