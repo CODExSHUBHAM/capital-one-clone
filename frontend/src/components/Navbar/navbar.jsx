@@ -33,7 +33,7 @@ const Navbar = () => {
           <Link to='/' onClick={resetMenu}><img src={logo} alt="logo" className='w-[190px]' /></Link>
           <nav className='text-base font-optimistr'>
             <ul className='flex space-x-8'>
-              <NavLink to='/deals' onClick={resetMenu} className='hover:text-blue-600' >Deals</NavLink>
+              <NavLink to='/deals' onClick={toggleSearch} className='hover:text-blue-600' >Deals</NavLink>
               <NavLink to='/catagories' onClick={resetMenu} className='hover:text-blue-600'>Categories</NavLink>
               <NavLink to='/resources' onClick={resetMenu} className='hover:text-blue-600'>Resources</NavLink>
             </ul>
