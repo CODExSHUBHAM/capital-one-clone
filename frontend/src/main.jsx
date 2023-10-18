@@ -18,6 +18,7 @@ import Procurementoverview from './components/FeaturedArticles/procurementovervi
 import Spendcategories from './components/FeaturedArticles/spendcategories.jsx'
 import Suppliermanagement from './components/FeaturedArticles/suppliermanagement.jsx'
 import Resourcelayout from './components/Resources/resourcelayout.jsx'
+import Deallayout from './components/Deals/deallayout.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,17 @@ const router = createBrowserRouter([
       },
       {
         path: "deals",
-        element: <Deals />
+        element: <Deallayout />,
+        children: [
+          {
+            path: "",
+            element: <Deals />,
+          },
+          {
+            path: ":id",
+            element: <Dealdetails />
+          },
+        ]
       },
       {
         path: "catagories",
@@ -78,10 +89,7 @@ const router = createBrowserRouter([
         path: "login",
         element: <Login />
       },
-      {
-        path: "deals/:id",
-        element: <Dealdetails />
-      },
+
       {
         path: "catagories/:id",
         element: <CatagoryDetails />
