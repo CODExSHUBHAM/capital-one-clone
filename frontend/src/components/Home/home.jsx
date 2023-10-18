@@ -12,8 +12,6 @@ const Home = () => {
   const topCatagories = catagories.slice(0, 4);
   const mobileCatagories = catagories.slice(0, 2)
 
-  console.log(mobileCatagories)
-
   // Get Deals 
 
   useEffect(() => {

@@ -1,9 +1,8 @@
 import logo from '/business-deals-logo-web.svg'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { Link, NavLink } from 'react-router-dom'
-import { FaTimes, FaBars } from 'react-icons/fa'
 import { useState } from 'react'
-import User from '/Icons/account.svg'
+import Search from '../Search/search'
 
 
 
@@ -34,7 +33,7 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className='flex space-x-5 items-center text-base font-optimistr'>
-            <span>
+            <span onClick={toggleMenu}>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='w-[24px]' fill='%23141414'>
                 <path
                   d='M21.466,19l-5.649-5.466a7.533,7.533,0,1,0-2.508,2.423l5.745,5.557A1.742,1.742,0,0,0,21.466,19ZM3,9.505a6.5,6.5,0,1,1,6.5,6.5A6.51,6.51,0,0,1,3,9.505ZM20.793,20.772a.733.733,0,0,1-.518.226.887.887,0,0,1-.528-.2l-5.6-5.413a7.608,7.608,0,0,0,1.068-1.032l5.554,5.373a.736.736,0,0,1,.227.52A.743.743,0,0,1,20.793,20.772Z' />
@@ -51,6 +50,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {
+        open ?(
+          <Search />
+        ):null
+      }
+      
 
       {/* mobile Nav  */}
       <div>

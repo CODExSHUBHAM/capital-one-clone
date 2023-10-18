@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import Search from "../Search/search.jsx";
 import { Link } from "react-router-dom";
 // import Breadcrumbs from "../Breadcrumbs/breadcrumbs.jsx";
 
@@ -85,8 +84,6 @@ const Deals = () => {
     <>
 
       <div>
-
-        <Search />
 
         <nav className="w-11/12 m-auto py-6 px-16 flex flex-col space-y-3">
           <div className="flex space-x-1 text-xs">
