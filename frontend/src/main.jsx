@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {RouterProvider, createBrowserRouter} from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home/home.jsx'
 import Deals from './components/Deals/deals.jsx'
 import Catagories from './components/Catagories/catagories.jsx'
@@ -22,65 +22,69 @@ import Resourcelayout from './components/Resources/resourcelayout.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "",
-        element: <Home/>
+        element: <Home />
       },
       {
         path: "deals",
-        element: <Deals/> 
+        element: <Deals />
       },
       {
         path: "catagories",
-        element: <Catagories/>
+        element: <Catagories />
       },
       {
         path: "resources",
-        element: <Resourcelayout/>,
+        element: <Resourcelayout />,
         children: [
           {
             path: "",
-            element: <Resources/>
+            element: <Resources />
           },
           {
             path: "procurementoverview",
-            element: <Procurementoverview/>
+            element: <Procurementoverview />
           },
           {
             path: "negosiation",
-            element: <Negosiation/>
+            element: <Negosiation />
           },
           {
             path: "suppliermanagement",
-            element: <Suppliermanagement/>
+            element: <Suppliermanagement />
           },
           {
             path: "contracts",
-            element: <Contracts/>
+            element: <Contracts />
           },
           {
             path: "spendcategories",
-            element: <Spendcategories/>
+            element: <Spendcategories />
           },
         ]
       },
       {
+        path: "resources/:id",
+        element: <Resourcedetails />
+      },
+      {
         path: "signup",
-        element: <Signup/>
+        element: <Signup />
       },
       {
         path: "login",
-        element: <Login/>
+        element: <Login />
       },
       {
-        path:"deals/:id",
-        element: <Dealdetails/>
+        path: "deals/:id",
+        element: <Dealdetails />
       },
       {
-        path:"catagories/:id",
-        element: <CatagoryDetails/>
+        path: "catagories/:id",
+        element: <CatagoryDetails />
       },
     ]
   }
@@ -88,6 +92,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

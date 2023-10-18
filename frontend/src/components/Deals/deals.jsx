@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Search from "../Search/search.jsx";
 import { Link } from "react-router-dom";
+// import Breadcrumbs from "../Breadcrumbs/breadcrumbs.jsx";
 
 const Deals = () => {
 
@@ -96,6 +97,8 @@ const Deals = () => {
           <h1 className="text-2xl">All Deals</h1>
           <hr className="border-black" />
         </nav>
+
+        {/* <Breadcrumbs/> */}
 
         <div className="md:flex w-10/12 m-auto">
 
