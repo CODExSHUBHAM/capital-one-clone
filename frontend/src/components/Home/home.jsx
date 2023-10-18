@@ -114,7 +114,7 @@ const Home = () => {
                 <input type="text" className="w-full p-3 border border-black rounded-md mb-2" />
                 <p className="text-xs mb-4 font-optimistr">When you provide your email address, we may use it to send communications about our site.</p>
                 <button className="w-full border-2 py-2 text-xl font-optimistr text-white bg-[#0276b1] rounded-md mb-4">Join with Email</button>
-                <p className="text-base font-optimistr mb-6">Are you a returning member? Sign In</p>
+                <p className="text-base font-optimistr mb-6 text-center">Are you a returning member? <Link className="text-blue" to='login'>Sign In</Link></p>
               </div>
 
               <p className="font-bold text-sm mb-6">OR</p>
