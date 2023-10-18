@@ -31,6 +31,23 @@ const CatagoryDetails = () => {
 
   return (
     <>
+      <nav className="md:w-[74%] w-[85%] m-auto py-4  flex flex-col space-y-3">
+        <div className="flex space-x-1 text-xs">
+          <Link to='/' className="font-optimistsb text-blue hover:underline">Home</Link>
+          <img src="/Icons/rightarrow.svg" className="w-[14px]" alt="" />
+          <a href="https://capital-one-vert.vercel.app/catagories" className="font-optimistsb text-blue hover:underline">Catagories</a>
+          <img src="/Icons/rightarrow.svg" className="w-[14px]" alt="" />
+          {
+            filteredCatagory.map((deal) => {
+              return (
+                <p key={deal.id} className="font-optimistr">{deal.subcategory}</p>
+              )
+            })
+          }
+
+        </div>
+        <hr className="border-[#d4d4d4]" />
+      </nav>
       {
         filteredCatagory.map((catagory) => {
           return (

@@ -22,13 +22,13 @@ const Catagories = () => {
   return (
     <div>
 
-      <nav className="w-11/12 m-auto py-6 md:px-16 flex flex-col space-y-3">
+      <nav className="md:w-[74%] w-[85%] m-auto py-4  flex flex-col space-y-3">
         <div className="flex space-x-1 text-xs">
-          <Link to='/' className="font-bold text-blue-600 hover:underline">Home</Link>
-          <p> &gt; </p>
-          <p>Catagories</p>
+          <Link to='/' className="font-optimistsb text-blue hover:underline">Home</Link>
+          <img src="/Icons/rightarrow.svg" className="w-[14px]" alt="" />
+          <p className="font-optimistr">Categories</p>
         </div>
-        <hr className="border-black" />
+        <hr className="border-[#d4d4d4]" />
       </nav>
 
       <div className="hidden md:block bg-[url(https://ecm.capitalone.com/ESM/assets/images/product-category-images/PCP-all-categories-optimized.jpg)] bg-cover bg-center py-14 px-40">
