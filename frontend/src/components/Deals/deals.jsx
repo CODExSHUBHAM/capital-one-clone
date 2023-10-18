@@ -87,27 +87,27 @@ const Deals = () => {
 
         {/* <Breadcrumbs/> */}
 
-        <nav className="w-11/12 m-auto py-6 px-16 flex flex-col space-y-3">
+        <nav className="md:w-[74%] w-[85%] m-auto py-4  flex flex-col space-y-3">
           <div className="flex space-x-1 text-xs">
-            <Link to='/' className="font-bold text-blue-600 hover:underline">Home</Link>
-            <img src="/Icons/rightarrow.svg" className="w-[12px]" alt="" />
-            <p>Deals</p>
+            <Link to='/' className="font-optimistsb text-blue hover:underline">Home</Link>
+            <img src="/Icons/rightarrow.svg" className="w-[14px]" alt="" />
+            <p className="font-optimistr">Deals</p>
           </div>
-          <h1 className="text-2xl">All Deals</h1>
-          <hr className="border-black" />
+          <h1 className="text-base md:text-2xl font-optimistsb md:font-optimistr">All Deals</h1>
+          <hr className="border-[#d4d4d4]" />
         </nav>
 
-        <div className="md:flex w-10/12 m-auto">
+        <div className="md:flex w-[85%] md:w-[74%] m-auto">
 
           {/* 1st Half */}
-          <section className="md:w-fit w-full hidden md:flex flex-col p-10 ">
+          <section className="md:w-[40%] w-full hidden md:flex flex-col pr-10 ">
             <div className="w-fit">
               <div className="flex justify-between">
                 <h1 className="text-xl font-semibold">Filter</h1>
                 <h1 className="font-semibold text-blue-600">Reset Filters</h1>
               </div>
               {/* filters */}
-              <div className="p-4 flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2 py-6">
 
                 <div className="flex space-x-4 items-center justify-between">
                   <div className="flex space-x-2 items-center">
@@ -186,22 +186,22 @@ const Deals = () => {
           </section>
 
           {/* 2nd Half */}
-          <section className="md:w-2/3 flex flex-col md:p-10 space-y-6">
-            <p className="font-medium"> {filteredDeals.length} results</p>
+          <section className="md:w=[60%] flex flex-col  space-y-6">
+            <p className="font-optimistr"> {filteredDeals.length} results</p>
             {/* card */}
             {filteredDeals.map((data, key) => {
               return (
-                <div key={key} className="flex flex-col  md:flex-row space-y-4 md:space-x-8 border w-full p-4 rounded-md bg-white md:text-left text-center items-center">
+                <div key={key} className="flex flex-col  md:flex-row space-y-4 md:space-y-0 md:space-x-8 border w-full p-4 rounded-md bg-white md:text-left text-center items-center">
                   <img src={data.supplierImage} alt="" className="md:w-1/4 w-3/4 border-2 rounded md" />
 
                   <div className="flex flex-col items-center md:items-start space-y-2 md:w-2/4">
-                    <p className="font-optimistb text-[#1E6A0B] md:w-3/5">{data.discountMessage}</p>
-                    <p className="font-bold">{data.title}</p>
-                  </div>
+                    <p className="font-optimistsb text-sm md:text-base text-[#008140] md:w-3/5">{data.discountMessage}</p>
+                    <p className="font-optimistr md:font-optimistsb text-xs md:text-base">{data.title}</p>
+                  </div>  
 
-                  <div className="md:w-1/4 w-full flex flex-col md:items-end">
+                  <div className="md:w-1/4 w-full flex flex-col">
                     <Link to={`/deals/${data.promotionId}`}>
-                      <button className=" bg-blue-600 px-8 py-2 md:py-1 bg-blue rounded-md text-white font-bold w-full">More Info</button>
+                      <button className="px-8 py-2 md:py-1 bg-blue rounded-md text-white font-optimistsb w-full">More Info</button>
                     </Link>
                   </div>
                 </div>
