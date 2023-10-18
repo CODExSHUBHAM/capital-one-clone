@@ -3,13 +3,16 @@ import { Link } from "react-router-dom"
 const Resourcedetails = () => {
   return (
     <div className="">
-      <nav className="w-4/5 m-auto py-6 flex flex-col space-y-3">
+      <nav className="md:w-[74%] w-[85%] m-auto py-4  flex flex-col space-y-3">
         <div className="flex space-x-1 text-xs">
-          <Link to='/' className="font-bold text-blue-600 hover:underline">Home</Link>
-          <p> &gt; </p>
-          <p>Catagories</p>
+          <Link to='/' className="font-optimistsb text-blue hover:underline">Home</Link>
+          <img src="/Icons/rightarrow.svg" className="w-[14px]" alt="" />
+          <a href="https://capital-one-vert.vercel.app/deals" className="font-optimistsb text-blue hover:underline">Resources</a>
+          <img src="/Icons/rightarrow.svg" className="w-[14px]" alt="" />
+          <p className="font-optimistr">Negotiations 101: When Price is Off the Table</p>
         </div>
-        <hr className="border-black" />
+
+        <hr className="border-[#d4d4d4]" />
       </nav>
       <img src="https://ecm.capitalone.com/ESM/assets/images/resource-images/article-voip-vs-landline-optimized.jpg" className="h-96 min-w-full object-cover object-center" alt="" />
       <div className="w-4/5 m-auto flex py-20 ">

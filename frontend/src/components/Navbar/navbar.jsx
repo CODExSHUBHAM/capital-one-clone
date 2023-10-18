@@ -1,5 +1,4 @@
 import logo from '/business-deals-logo-web.svg'
-import { AiOutlineSearch } from 'react-icons/ai'
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import Search from '../Search/search'
