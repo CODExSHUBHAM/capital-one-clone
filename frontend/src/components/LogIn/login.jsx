@@ -3,7 +3,7 @@ import {HiOutlineMail} from 'react-icons/hi'
 const Login = () => {
   return (
     <div>
-      <div className="w-3/12 mx-auto text-center space-y-4 p-10">
+      <div className="md:w-3/12 mx-auto text-center space-y-4 p-10">
         <h1 className="text-[32px] font-light">Sign In</h1>
         <p>Sign in with your Capital One account</p>
         <div className="space-y-6">

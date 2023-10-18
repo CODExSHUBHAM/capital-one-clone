@@ -4,10 +4,10 @@ import { BsXCircleFill } from 'react-icons/bs'
 const Signup = () => {
   return (
     <div className="bg-white">
-      <div className="w-6/12 m-auto p-12 text-center flex flex-col items-center space-y-6">
+      <div className="md:w-6/12 m-auto p-12 text-center flex flex-col items-center space-y-6">
         <div className="flex flex-col items-center">
-          <h1 className="text-[48px] font-light">Join Business Deals <br />and Start Saving</h1>
-          <span className="flex space-x-1 font-medium"><p>Already a Business Deals member?</p><Link to='/login' className="text-blue-600">Sign In</Link></span>
+          <h1 className="md:text-[48px] text-[32px] font-light">Join Business Deals <br />and Start Saving</h1>
+          <span className="flex space-x-1 font-medium text-[14px]"><p>Already a Business Deals member?</p><Link to='/login' className="text-blue-600">Sign In</Link></span>
         </div>
         <button className="w-full border py-2 text-xl font-semibold rounded-md border-blue-600 mb-4 flex items-center justify-center text-blue-600"> <img className="p-2" src="https://businessdeals.capitalone.com/img/capital-one-icon.svg" alt="" /> Sign in with Capital One</button>
         <button className="w-full border border-blue-600 py-2 text-xl font-semibold rounded-md mb-4 flex items-center justify-center text-blue-600">  <img className="p-2" src="https://businessdeals.capitalone.com/img/facebook-icon.svg" alt="" />Sign in with Facebook</button>
@@ -15,12 +15,12 @@ const Signup = () => {
         <div className="w-full flex flex-col items-start">
           <h1 className="pb-6 font-medium">Sign up with your email address</h1>
           <div className="w-full space-y-8">
-            <div className="w-full flex justify-between">
-              <div className="w-[48%] flex flex-col items-start space-y-2">
+            <div className="w-full flex flex-col md:flex-row justify-between">
+              <div className="md:w-[48%] flex flex-col items-start space-y-2">
                 <label htmlFor="first-name" className="font-medium">First Name</label>
                 <input type="text" name="first-name" id="" className="p-3 rounded-md border border-black w-full" />
               </div>
-              <div className="w-[48%] flex flex-col items-start space-y-2">
+              <div className="md:w-[48%] flex flex-col items-start space-y-2">
                 <label htmlFor="first-name" className="font-medium">Last Name</label>
                 <input type="text" name="first-name" id="" className="p-3 rounded-md border border-black w-full" />
               </div>
@@ -33,12 +33,12 @@ const Signup = () => {
               <label htmlFor="Business-name" className="font-medium">Email Address (Used to sign in on future visits)</label>
               <input type="text" name="Business-name" id="" className="p-3 rounded-md border border-black w-full" />
             </div>
-            <div className="w-full flex justify-between">
-              <div className="w-[48%] flex flex-col items-start space-y-2">
+            <div className="w-full flex flex-col md:flex-row justify-between">
+              <div className="md:w-[48%] flex flex-col items-start space-y-2">
                 <label htmlFor="first-name" className="font-medium">Password</label>
                 <input type="text" name="first-name" id="" className="p-3 rounded-md border border-black w-full" />
               </div>
-              <div className="w-[48%] flex flex-col items-start space-y-2">
+              <div className="md:w-[48%] flex flex-col items-start space-y-2">
                 <label htmlFor="first-name" className="font-medium">Confirm Password</label>
                 <input type="text" name="first-name" id="" className="p-3 rounded-md border border-black w-full" />
               </div>
